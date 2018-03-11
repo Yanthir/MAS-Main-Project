@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$USER_HOME$/Desktop/Workspace/Studia/MAS/MainProject/MAS_0/MAS_0.iml" filepath="$USER_HOME$/Desktop/Workspace/Studia/MAS/MainProject/MAS_0/MAS_0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MAS.iml" filepath="$PROJECT_DIR$/MAS.iml" />
     </modules>
   </component>
 </project>
