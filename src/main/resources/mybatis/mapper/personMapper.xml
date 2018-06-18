@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Person">
+    <resultMap id="personResultMap" type="Person">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="surname" property="surname"/>
+    </resultMap>
+    
+    <select id="selectPersonById" resultMap="personResultMap">
+        SELECT
+          OSB_ID id,
+          OSB_NAME name,
+          OSB_SURNAME surname
+        FROM MAS_OSOBA
+        WHERE OSB_ID = #{id}
+    </select>
+</mapper>
