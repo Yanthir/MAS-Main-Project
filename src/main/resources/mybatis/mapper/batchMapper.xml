@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mas.mapper.BatchMapper">
+
+    <sql id="selectBatch">
+        SELECT
+            BAT_ID id,
+            BAT_REC_ID recipeId,
+            BAT_STA_ID statusId,
+            BAT_CREATE_DATE createDate,
+            BAT_EXPIRATION_DATE expirationDate,
+            BAT_VOLUME volume,
+            BAT_AVAILABLE_VOLUME availableVolume
+        FROM MAS_BATCH
+    </sql>
+
+    <select id="selectBatchById" resultType="BatchDTO">
+        <include refid="selectBatch"/>
+        WHERE BAT_ID = #{id}
+    </select>
+
+    <select id="selectBatchesByIds" resultType="BatchDTO">
+        <include refid="selectBatch"/>
+        WHERE BAT_ID IN
+          <foreach item="id" collection="list" open="(" separator="," close=")">
+              #{id}
+          </foreach>
+    </select>
+
+    <select id="selectAllBatches" resultType="BatchDTO">
+        <include refid="selectBatch"/>
+    </select>
+
+    <update id="updateBatch">
+        UPDATE MAS_BATCH
+            SET BAT_STA_ID = #{batch.statusId},
+                BAT_VOLUME = #{batch.volume},
+                BAT_AVAILABLE_VOLUME = #{batch.availableVolume}
+        WHERE BAT_ID = #{batch.id}
+    </update>
+
+    <insert id="insertBatch">
+        INSERT INTO MAS_BATCH (
+            BAT_ID,
+            BAT_CREATE_DATE,
+            BAT_STA_ID,
+            BAT_EXPIRATION_DATE,
+            BAT_VOLUME,
+            BAT_AVAILABLE_VOLUME,
+            BAT_REC_ID
+        )
+        VALUES (
+            MAS_BATCH_SEQ.nextval,
+            #{batch.createDate},
+            #{batch.statusId},
+            #{batch.expirationDate},
+            #{batch.volume},
+            #{batch.availableVolume},
+            #{batch.recipeId}
+        )
+    </insert>
+
+    <delete id="deleteBatchById">
+        DELETE FROM MAS_BATCH
+        WHERE BAT_ID = #{id}
+    </delete>
+
+    <delete id="deleteBatchesByIds">
+        DELETE FROM MAS_BATCH
+        WHERE BAT_ID in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

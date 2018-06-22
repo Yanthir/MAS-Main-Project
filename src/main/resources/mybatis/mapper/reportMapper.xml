@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mas.mapper.ReportMapper">
+
+    <sql id="selectReport">
+        SELECT
+            REP_ID id,
+            REP_BAT_ID batchId,
+            REP_EMP_ID employeeId,
+            REP_DESCRIPTION description,
+            REP_CREATE_DATE createDate
+        FROM MAS_REPORT
+    </sql>
+
+    <select id="selectReportById" resultType="ReportDTO">
+        <include refid="selectReport"/>
+        WHERE REP_ID = #{id}
+    </select>
+
+    <select id="selectReportsByIds" resultType="ReportDTO">
+        <include refid="selectReport"/>
+        WHERE REP_ID IN
+          <foreach item="id" collection="list" open="(" separator="," close=")">
+              #{id}
+          </foreach>
+    </select>
+
+    <select id="selectAllReports" resultType="ReportDTO">
+        <include refid="selectReport"/>
+    </select>
+
+    <update id="updateReport">
+        UPDATE MAS_REPORT
+        SET REP_DESCRIPTION = #{report.description}
+        WHERE REP_ID = #{report.id}
+    </update>
+
+    <insert id="insertReport">
+        INSERT INTO MAS_REPORT (
+            REP_ID,
+            REP_EMP_ID,
+            REP_BAT_ID,
+            REP_DESCRIPTION,
+            REP_CREATE_DATE
+        )
+        VALUES (
+            MAS_REPORT_SEQ.nextval,
+            #{report.employeeId},
+            #{report.batchId},
+            #{report.description},
+            #{report.createDate}
+        )
+    </insert>
+
+    <delete id="deleteReportById">
+        DELETE FROM MAS_REPORT
+        WHERE REP_ID = #{id}
+    </delete>
+
+    <delete id="deleteReportsByIds">
+        DELETE FROM MAS_REPORT
+        WHERE REP_ID in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

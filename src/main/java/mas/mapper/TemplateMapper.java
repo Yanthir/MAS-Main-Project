@@ -1,6 +1,6 @@
 package mas.mapper;
 
-import mas.model.dto.PersonDTO;
+import mas.model.dto.TemplateDTO;
 import mas.manager.MyBatisSqlSessionManager;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.SqlSession;
@@ -8,59 +8,59 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import java.util.List;
 
-public class PersonMapper extends AbstractMapper {
+public class TemplateMapper extends AbstractMapper {
     private static SqlSessionFactory sqlSessionFactory = MyBatisSqlSessionManager.getFactory();
 
-    public static PersonDTO selectPersonById(@Param("id") String id) {
+    public static TemplateDTO selectTemplateById(@Param("id") String id) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            return session.selectOne("selectPersonById", id);
+            return session.selectOne("selectTemplateById", id);
         } finally {
             closeAllConnections();
         }
     }
 
-    public static List<PersonDTO> selectPersonsByIds(@Param("id") List<String> ids) {
+    public static List<TemplateDTO> selectTemplatesByIds(@Param("id") List<String> ids) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            return session.selectList("selectPersonsByIds", ids);
+            return session.selectList("selectTemplatesByIds", ids);
         } finally {
             closeAllConnections();
         }
     }
 
-    public static List<PersonDTO> selectAllPersons() {
+    public static List<TemplateDTO> selectAllTemplates() {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            return session.selectList("selectAllPersons");
+            return session.selectList("selectAllTemplates");
         } finally {
             closeAllConnections();
         }
     }
 
-    public static void updatePerson(@Param("person") PersonDTO person) {
+    public static void updateTemplate(@Param("template") TemplateDTO template) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            session.update("updatePerson", person);
+            session.update("updateTemplate", template);
         } finally {
             closeAllConnections();
         }
     }
 
-    public static void insertPerson(@Param("person") PersonDTO person) {
+    public static void insertTemplate(@Param("template") TemplateDTO template) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            session.insert("insertPerson", person);
+            session.insert("insertTemplate", template);
         } finally {
             closeAllConnections();
         }
     }
 
-    public static void deletePersonById(@Param("id") String id) {
+    public static void deleteTemplateById(@Param("id") String id) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            session.delete("deletePersonById", id);
+            session.delete("deleteTemplateById", id);
         } finally {
             closeAllConnections();
         }
     }
-    public static void deletePersonsByIds(@Param("ids") List<String> ids) {
+    public static void deleteTemplatesByIds(@Param("ids") List<String> ids) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            session.delete("deletePersonsByIds", ids);
+            session.delete("deleteTemplatesByIds", ids);
         } finally {
             closeAllConnections();
         }

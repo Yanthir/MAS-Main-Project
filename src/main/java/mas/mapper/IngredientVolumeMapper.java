@@ -1,6 +1,6 @@
 package mas.mapper;
 
-import mas.model.dto.PersonDTO;
+import mas.model.dto.IngredientVolumeDTO;
 import mas.manager.MyBatisSqlSessionManager;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.SqlSession;
@@ -8,59 +8,59 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import java.util.List;
 
-public class PersonMapper extends AbstractMapper {
+public class IngredientVolumeMapper extends AbstractMapper {
     private static SqlSessionFactory sqlSessionFactory = MyBatisSqlSessionManager.getFactory();
 
-    public static PersonDTO selectPersonById(@Param("id") String id) {
+    public static IngredientVolumeDTO selectIngredientVolumeById(@Param("id") String id) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            return session.selectOne("selectPersonById", id);
+            return session.selectOne("selectIngredientVolumeById", id);
         } finally {
             closeAllConnections();
         }
     }
 
-    public static List<PersonDTO> selectPersonsByIds(@Param("id") List<String> ids) {
+    public static List<IngredientVolumeDTO> selectIngredientVolumesByIds(@Param("id") List<String> ids) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            return session.selectList("selectPersonsByIds", ids);
+            return session.selectList("selectIngredientVolumesByIds", ids);
         } finally {
             closeAllConnections();
         }
     }
 
-    public static List<PersonDTO> selectAllPersons() {
+    public static List<IngredientVolumeDTO> selectAllIngredientVolumes() {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            return session.selectList("selectAllPersons");
+            return session.selectList("selectAllIngredientVolumes");
         } finally {
             closeAllConnections();
         }
     }
 
-    public static void updatePerson(@Param("person") PersonDTO person) {
+    public static void updateIngredientVolume(@Param("ingredientVolume") IngredientVolumeDTO ingredientVolume) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            session.update("updatePerson", person);
+            session.update("updateIngredientVolume", ingredientVolume);
         } finally {
             closeAllConnections();
         }
     }
 
-    public static void insertPerson(@Param("person") PersonDTO person) {
+    public static void insertIngredientVolume(@Param("ingredientVolume") IngredientVolumeDTO ingredientVolume) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            session.insert("insertPerson", person);
+            session.insert("insertIngredientVolume", ingredientVolume);
         } finally {
             closeAllConnections();
         }
     }
 
-    public static void deletePersonById(@Param("id") String id) {
+    public static void deleteIngredientVolumeById(@Param("id") String id) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            session.delete("deletePersonById", id);
+            session.delete("deleteIngredientVolumeById", id);
         } finally {
             closeAllConnections();
         }
     }
-    public static void deletePersonsByIds(@Param("ids") List<String> ids) {
+    public static void deleteIngredientVolumesByIds(@Param("ids") List<String> ids) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            session.delete("deletePersonsByIds", ids);
+            session.delete("deleteIngredientVolumesByIds", ids);
         } finally {
             closeAllConnections();
         }

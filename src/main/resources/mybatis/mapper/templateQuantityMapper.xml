@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mas.mapper.TemplateQuantityMapper">
+
+    <sql id="selectTemplateQuantity">
+        SELECT
+            TIS_ID id,
+            TIS_TEM_ID templateId,
+            TIS_SET_ID setId,
+            TIS_QUANTITY quantity
+        FROM MAS_TEM_IN_SET
+    </sql>
+
+    <select id="selectTemplateQuantityById" resultType="TemplateQuantityDTO">
+        <include refid="selectTemplateQuantity"/>
+        WHERE TIS_ID = #{id}
+    </select>
+
+    <select id="selectTemplateQuantitiesByIds" resultType="TemplateQuantityDTO">
+        <include refid="selectTemplateQuantity"/>
+        WHERE TIS_ID IN
+          <foreach item="id" collection="list" open="(" separator="," close=")">
+              #{id}
+          </foreach>
+    </select>
+
+    <select id="selectAllTemplateQuantities" resultType="TemplateQuantityDTO">
+        <include refid="selectTemplateQuantity"/>
+    </select>
+
+    <update id="updateTemplateQuantity">
+        UPDATE MAS_TEM_IN_SET
+        SET TIS_QUANTITY = #{templateQuantity.quatity}
+        WHERE TIS_ID = #{templateQuantity.id}
+    </update>
+
+    <insert id="insertTemplateQuantity">
+        INSERT INTO MAS_TEM_IN_SET (
+            TIS_ID,
+            TIS_TEM_ID,
+            TIS_SET_ID,
+            TIS_QUANTITY
+        )
+        VALUES (
+            MAS_TEM_IN_SET_SEQ.nextval,
+            #{templateQuantity.templateId},
+            #{templateQuantity.setId},
+            #{templateQuantity.quantity}
+        )
+    </insert>
+
+    <delete id="deleteTemplateQuantityById">
+        DELETE FROM MAS_TEM_IN_SET
+        WHERE TIS_ID = #{id}
+    </delete>
+
+    <delete id="deleteTemplateQuantitiesByIds">
+        DELETE FROM MAS_TEM_IN_SET
+        WHERE TIS_ID in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

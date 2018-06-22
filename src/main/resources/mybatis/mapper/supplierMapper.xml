@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mas.mapper.SupplierMapper">
+
+    <sql id="selectSupplier">
+        SELECT
+            SUP_ID id,
+            SUP_COMPANY_NAME name,
+            SUP_ADDRESS address,
+            SUP_PHONE_NUMBER phoneNumber
+        FROM MAS_SUPPLIER
+    </sql>
+
+    <select id="selectSupplierById" resultType="SupplierDTO">
+        <include refid="selectSupplier"/>
+        WHERE SUP_ID = #{id}
+    </select>
+
+    <select id="selectSuppliersByIds" resultType="SupplierDTO">
+        <include refid="selectSupplier"/>
+        WHERE SUP_ID IN
+          <foreach item="id" collection="list" open="(" separator="," close=")">
+              #{id}
+          </foreach>
+    </select>
+
+    <select id="selectAllSuppliers" resultType="SupplierDTO">
+        <include refid="selectSupplier"/>
+    </select>
+
+    <update id="updateSupplier">
+        UPDATE MAS_SUPPLIER
+        SET SUP_COMPANY_NAME = #{supplier.name},
+            SUP_ADDRESS = #{supplier.address},
+            SUP_PHONE_NUMBER = #{supplier.phoneNumber}
+        WHERE SUP_ID = #{supplier.id}
+    </update>
+
+    <insert id="insertSupplier">
+        INSERT INTO MAS_SUPPLIER (
+            SUP_ID,
+            SUP_COMPANY_NAME,
+            SUP_ADDRESS,
+            SUP_PHONE_NUMBER
+        )
+        VALUES (
+            MAS_SUPPLIER_SEQ.nextval,
+            #{supplier.name},
+            #{supplier.address},
+            #{supplier.phoneNumber}
+        )
+    </insert>
+
+    <delete id="deleteSupplierById">
+        DELETE FROM MAS_SUPPLIER
+        WHERE SUP_ID = #{id}
+    </delete>
+
+    <delete id="deleteSuppliersByIds">
+        DELETE FROM MAS_SUPPLIER
+        WHERE SUP_ID in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

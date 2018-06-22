@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mas.mapper.IngredientVolumeMapper">
+
+    <sql id="selectIngredientVolume">
+        SELECT
+            IIR_ID id,
+            IIR_ING_ID ingredientId,
+            IIR_REC_ID recipeId,
+            IIR_VOLUME volume
+        FROM MAS_ING_IN_REC
+    </sql>
+
+    <select id="selectIngredientVolumeById" resultType="IngredientVolumeDTO">
+        <include refid="selectIngredientVolume"/>
+        WHERE IIR_ID = #{id}
+    </select>
+
+    <select id="selectIngredientVolumesByIds" resultType="IngredientVolumeDTO">
+        <include refid="selectIngredientVolume"/>
+        WHERE IIR_ID IN
+          <foreach item="id" collection="list" open="(" separator="," close=")">
+              #{id}
+          </foreach>
+    </select>
+
+    <select id="selectAllIngredientVolumes" resultType="IngredientVolumeDTO">
+        <include refid="selectIngredientVolume"/>
+    </select>
+
+    <update id="updateIngredientVolume">
+        UPDATE MAS_ING_IN_REC
+        SET IIR_VOLUME = #{ingredientVolume.volume}
+        WHERE IIR_ID = #{ingredientVolume.id}
+    </update>
+
+    <insert id="insertIngredientVolume">
+        INSERT INTO MAS_ING_IN_REC (
+            IIR_ID,
+            IIR_ING_ID,
+            IIR_REC_ID,
+            IIR_VOLUME
+        )
+        VALUES (
+            MAS_ING_IN_REC_SEQ.nextval,
+            #{ingredientVolume.ingredientId},
+            #{ingredientVolume.recipeId},
+            #{ingredientVolume.volume}
+        )
+    </insert>
+
+    <delete id="deleteIngredientVolumeById">
+        DELETE FROM MAS_ING_IN_REC
+        WHERE IIR_ID = #{id}
+    </delete>
+
+    <delete id="deleteIngredientVolumesByIds">
+        DELETE FROM MAS_ING_IN_REC
+        WHERE IIR_ID in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

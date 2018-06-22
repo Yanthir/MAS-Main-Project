@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mas.mapper.SubscriptionMapper">
+
+    <sql id="selectSubscription">
+        SELECT
+            SUB_ID id,
+            SUB_SET_ID setId,
+            SUB_CLI_ID clientId,
+            SUB_CYCLE_LENGTH cycleLength,
+            SUB_CYCLE_COUNT cycleCount,
+            SUB_START_DATE startDate,
+            SUB_END_DATE endDate
+        FROM MAS_SUBSCRIPTION
+    </sql>
+
+    <select id="selectSubscriptionById" resultType="SubscriptionDTO">
+        <include refid="selectSubscription"/>
+        WHERE SUB_ID = #{id}
+    </select>
+
+    <select id="selectSubscriptionsByIds" resultType="SubscriptionDTO">
+        <include refid="selectSubscription"/>
+        WHERE SUB_ID IN
+          <foreach item="id" collection="list" open="(" separator="," close=")">
+              #{id}
+          </foreach>
+    </select>
+
+    <select id="selectAllSubscriptions" resultType="SubscriptionDTO">
+        <include refid="selectSubscription"/>
+    </select>
+
+    <update id="updateSubscription">
+        UPDATE MAS_SUBSCRIPTION
+        SET SUB_CYCLE_LENGTH = #{subscription.cycleLength},
+            SUB_CYCLE_COUNT = #{subscription.cycleCount},
+            SUB_END_DATE = #{subscription.endDate}
+        WHERE SUB_ID = #{subscription.id}
+    </update>
+
+    <insert id="insertSubscription">
+        INSERT INTO MAS_SUBSCRIPTION (
+            SUB_ID,
+            SUB_SET_ID,
+            SUB_CLI_ID,
+            SUB_CYCLE_LENGTH,
+            SUB_CYCLE_COUNT,
+            SUB_START_DATE,
+            SUB_END_DATE
+        )
+        VALUES (
+            MAS_SUBSCRIPTION_SEQ.nextval,
+            #{subscription.setId},
+            #{subscription.clientId},
+            #{subscription.cycleLength},
+            #{subscription.cycleCount},
+            #{subscription.startDate},
+            #{subscription.endDate}
+        )
+    </insert>
+
+    <delete id="deleteSubscriptionById">
+        DELETE FROM MAS_SUBSCRIPTION
+        WHERE SUB_ID = #{id}
+    </delete>
+
+    <delete id="deleteSubscriptionsByIds">
+        DELETE FROM MAS_SUBSCRIPTION
+        WHERE SUB_ID in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

@@ -1,6 +1,6 @@
 package mas.mapper;
 
-import mas.model.dto.PersonDTO;
+import mas.model.dto.OrderDTO;
 import mas.manager.MyBatisSqlSessionManager;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.SqlSession;
@@ -8,59 +8,59 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import java.util.List;
 
-public class PersonMapper extends AbstractMapper {
+public class OrderMapper extends AbstractMapper {
     private static SqlSessionFactory sqlSessionFactory = MyBatisSqlSessionManager.getFactory();
 
-    public static PersonDTO selectPersonById(@Param("id") String id) {
+    public static OrderDTO selectOrderById(@Param("id") String id) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            return session.selectOne("selectPersonById", id);
+            return session.selectOne("selectOrderById", id);
         } finally {
             closeAllConnections();
         }
     }
 
-    public static List<PersonDTO> selectPersonsByIds(@Param("id") List<String> ids) {
+    public static List<OrderDTO> selectOrdersByIds(@Param("id") List<String> ids) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            return session.selectList("selectPersonsByIds", ids);
+            return session.selectList("selectOrdersByIds", ids);
         } finally {
             closeAllConnections();
         }
     }
 
-    public static List<PersonDTO> selectAllPersons() {
+    public static List<OrderDTO> selectAllOrders() {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            return session.selectList("selectAllPersons");
+            return session.selectList("selectAllOrders");
         } finally {
             closeAllConnections();
         }
     }
 
-    public static void updatePerson(@Param("person") PersonDTO person) {
+    public static void updateOrder(@Param("order") OrderDTO order) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            session.update("updatePerson", person);
+            session.update("updateOrder", order);
         } finally {
             closeAllConnections();
         }
     }
 
-    public static void insertPerson(@Param("person") PersonDTO person) {
+    public static void insertOrder(@Param("order") OrderDTO order) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            session.insert("insertPerson", person);
+            session.insert("insertOrder", order);
         } finally {
             closeAllConnections();
         }
     }
 
-    public static void deletePersonById(@Param("id") String id) {
+    public static void deleteOrderById(@Param("id") String id) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            session.delete("deletePersonById", id);
+            session.delete("deleteOrderById", id);
         } finally {
             closeAllConnections();
         }
     }
-    public static void deletePersonsByIds(@Param("ids") List<String> ids) {
+    public static void deleteOrdersByIds(@Param("ids") List<String> ids) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            session.delete("deletePersonsByIds", ids);
+            session.delete("deleteOrdersByIds", ids);
         } finally {
             closeAllConnections();
         }

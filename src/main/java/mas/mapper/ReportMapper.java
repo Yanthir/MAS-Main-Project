@@ -1,6 +1,6 @@
 package mas.mapper;
 
-import mas.model.dto.PersonDTO;
+import mas.model.dto.ReportDTO;
 import mas.manager.MyBatisSqlSessionManager;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.SqlSession;
@@ -8,59 +8,59 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import java.util.List;
 
-public class PersonMapper extends AbstractMapper {
+public class ReportMapper extends AbstractMapper {
     private static SqlSessionFactory sqlSessionFactory = MyBatisSqlSessionManager.getFactory();
 
-    public static PersonDTO selectPersonById(@Param("id") String id) {
+    public static ReportDTO selectReportById(@Param("id") String id) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            return session.selectOne("selectPersonById", id);
+            return session.selectOne("selectReportById", id);
         } finally {
             closeAllConnections();
         }
     }
 
-    public static List<PersonDTO> selectPersonsByIds(@Param("id") List<String> ids) {
+    public static List<ReportDTO> selectReportsByIds(@Param("id") List<String> ids) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            return session.selectList("selectPersonsByIds", ids);
+            return session.selectList("selectReportsByIds", ids);
         } finally {
             closeAllConnections();
         }
     }
 
-    public static List<PersonDTO> selectAllPersons() {
+    public static List<ReportDTO> selectAllReports() {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            return session.selectList("selectAllPersons");
+            return session.selectList("selectAllReports");
         } finally {
             closeAllConnections();
         }
     }
 
-    public static void updatePerson(@Param("person") PersonDTO person) {
+    public static void updateReport(@Param("report") ReportDTO report) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            session.update("updatePerson", person);
+            session.update("updateReport", report);
         } finally {
             closeAllConnections();
         }
     }
 
-    public static void insertPerson(@Param("person") PersonDTO person) {
+    public static void insertReport(@Param("report") ReportDTO report) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            session.insert("insertPerson", person);
+            session.insert("insertReport", report);
         } finally {
             closeAllConnections();
         }
     }
 
-    public static void deletePersonById(@Param("id") String id) {
+    public static void deleteReportById(@Param("id") String id) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            session.delete("deletePersonById", id);
+            session.delete("deleteReportById", id);
         } finally {
             closeAllConnections();
         }
     }
-    public static void deletePersonsByIds(@Param("ids") List<String> ids) {
+    public static void deleteReportsByIds(@Param("ids") List<String> ids) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            session.delete("deletePersonsByIds", ids);
+            session.delete("deleteReportsByIds", ids);
         } finally {
             closeAllConnections();
         }

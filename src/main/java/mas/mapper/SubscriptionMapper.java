@@ -1,6 +1,6 @@
 package mas.mapper;
 
-import mas.model.dto.PersonDTO;
+import mas.model.dto.SubscriptionDTO;
 import mas.manager.MyBatisSqlSessionManager;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.SqlSession;
@@ -8,59 +8,59 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import java.util.List;
 
-public class PersonMapper extends AbstractMapper {
+public class SubscriptionMapper extends AbstractMapper {
     private static SqlSessionFactory sqlSessionFactory = MyBatisSqlSessionManager.getFactory();
 
-    public static PersonDTO selectPersonById(@Param("id") String id) {
+    public static SubscriptionDTO selectSubscriptionById(@Param("id") String id) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            return session.selectOne("selectPersonById", id);
+            return session.selectOne("selectSubscriptionById", id);
         } finally {
             closeAllConnections();
         }
     }
 
-    public static List<PersonDTO> selectPersonsByIds(@Param("id") List<String> ids) {
+    public static List<SubscriptionDTO> selectSubscriptionsByIds(@Param("id") List<String> ids) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            return session.selectList("selectPersonsByIds", ids);
+            return session.selectList("selectSubscriptionsByIds", ids);
         } finally {
             closeAllConnections();
         }
     }
 
-    public static List<PersonDTO> selectAllPersons() {
+    public static List<SubscriptionDTO> selectAllSubscriptions() {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            return session.selectList("selectAllPersons");
+            return session.selectList("selectAllSubscriptions");
         } finally {
             closeAllConnections();
         }
     }
 
-    public static void updatePerson(@Param("person") PersonDTO person) {
+    public static void updateSubscription(@Param("subscription") SubscriptionDTO subscription) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            session.update("updatePerson", person);
+            session.update("updateSubscription", subscription);
         } finally {
             closeAllConnections();
         }
     }
 
-    public static void insertPerson(@Param("person") PersonDTO person) {
+    public static void insertSubscription(@Param("subscription") SubscriptionDTO subscription) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            session.insert("insertPerson", person);
+            session.insert("insertSubscription", subscription);
         } finally {
             closeAllConnections();
         }
     }
 
-    public static void deletePersonById(@Param("id") String id) {
+    public static void deleteSubscriptionById(@Param("id") String id) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            session.delete("deletePersonById", id);
+            session.delete("deleteSubscriptionById", id);
         } finally {
             closeAllConnections();
         }
     }
-    public static void deletePersonsByIds(@Param("ids") List<String> ids) {
+    public static void deleteSubscriptionsByIds(@Param("ids") List<String> ids) {
         try(SqlSession session = sqlSessionFactory.openSession()) {
-            session.delete("deletePersonsByIds", ids);
+            session.delete("deleteSubscriptionsByIds", ids);
         } finally {
             closeAllConnections();
         }

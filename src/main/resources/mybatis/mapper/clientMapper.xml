@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mas.mapper.ClientMapper">
+
+    <sql id="selectClient">
+        SELECT
+            CLI_PER_ID id,
+            CLI_EMAIL emailAddress,
+            PER_NAME name,
+            PER_SURNAME surname,
+            PER_ADDRESS address
+        FROM MAS_CLIENT
+        JOIN MAS_PERSON ON MAS_CLIENT.CLI_PER_ID = MAS_PERSON.PER_ID
+    </sql>
+
+    <select id="selectClientById" resultType="ClientDTO">
+        <include refid="selectClient"/>
+        WHERE CLI_PER_ID = #{id}
+    </select>
+
+    <select id="selectClientsByIds" resultType="ClientDTO">
+        <include refid="selectClient"/>
+        WHERE CLI_PER_ID IN
+          <foreach item="id" collection="list" open="(" separator="," close=")">
+              #{id}
+          </foreach>
+    </select>
+
+    <select id="selectAllClients" resultType="ClientDTO">
+        <include refid="selectClient"/>
+    </select>
+
+    <update id="updateClient">
+        UPDATE MAS_PERSON
+        SET PER_NAME = #{client.name},
+            PER_SURNAME = #{client.surname},
+            PER_ADDRESS = #{client.address}
+        WHERE PER_ID = #{client.id};
+        UPDATE MAS_CLIENT
+        SET CLI_EMAIL = #{client.emailAddress}
+        WHERE CLI_PER_ID = #{client.id}
+    </update>
+
+    <insert id="insertClient">
+        INSERT INTO MAS_PERSON (
+            PER_ID,
+            PER_SURNAME,
+            PER_NAME,
+            PER_ADDRESS
+        )
+        VALUES (
+            MAS_PERSON_SEQ.nextval,
+            #{client.surname},
+            #{client.name},
+            #{client.address}
+        );
+        INSERT INTO MAS_CLIENT (
+            CLI_PER_ID,
+            CLI_EMAIL
+        )
+        VALUES (
+            MAS_PERSON_SEQ.currval,
+            #{client.emailAddress}
+        )
+    </insert>
+
+    <delete id="deleteClientById">
+        DELETE FROM MAS_CLIENT
+        WHERE CLI_PER_ID = #{id}
+    </delete>
+
+    <delete id="deleteClientsByIds">
+        DELETE FROM MAS_CLIENT
+        WHERE CLI_PER_ID in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

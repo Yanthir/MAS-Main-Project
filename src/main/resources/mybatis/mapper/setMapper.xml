@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mas.mapper.SetMapper">
+
+    <sql id="selectSet">
+        SELECT
+            SET_ID id,
+            SET_NAME name,
+            SET_DESCRIPTION description,
+            SET_PRICE price
+        FROM MAS_SET
+    </sql>
+
+    <select id="selectSetById" resultType="SetDTO">
+        <include refid="selectSet"/>
+        WHERE SET_ID = #{id}
+    </select>
+
+    <select id="selectSetsByIds" resultType="SetDTO">
+        <include refid="selectSet"/>
+        WHERE SET_ID IN
+          <foreach item="id" collection="list" open="(" separator="," close=")">
+              #{id}
+          </foreach>
+    </select>
+
+    <select id="selectAllSets" resultType="SetDTO">
+        <include refid="selectSet"/>
+    </select>
+
+    <update id="updateSet">
+        UPDATE MAS_SET
+        SET SET_DESCRIPTION = #{set.description},
+            SET_PRICE = #{set.price},
+            SET_NAME = #{set.name}
+        WHERE SET_ID = #{set.id}
+    </update>
+
+    <insert id="insertSet">
+        INSERT INTO MAS_SET (
+            SET_ID,
+            SET_DESCRIPTION,
+            SET_PRICE,
+            SET_NAME
+        )
+        VALUES (
+            MAS_SET_SEQ.nextval,
+            #{set.description},
+            #{set.price},
+            #{set.name}
+        )
+    </insert>
+
+    <delete id="deleteSetById">
+        DELETE FROM MAS_SET
+        WHERE SET_ID = #{id}
+    </delete>
+
+    <delete id="deleteSetsByIds">
+        DELETE FROM MAS_SET
+        WHERE SET_ID in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

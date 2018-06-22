@@ -11,12 +11,52 @@
     </description>
     
     <welcome-file-list>
-        <welcome-file>hello.jsp</welcome-file>
+        <welcome-file>welcome</welcome-file>
     </welcome-file-list>
 
     <servlet>
-        <servlet-name>HelloServlet</servlet-name>
-        <servlet-class>mas.controller.HelloWorldServlet</servlet-class>
+        <servlet-name>AuthenticationController</servlet-name>
+        <servlet-class>mas.controller.AuthenticationController</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>WelcomeController</servlet-name>
+        <servlet-class>mas.controller.WelcomeController</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DashboardController</servlet-name>
+        <servlet-class>mas.controller.DashboardController</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>LogoutController</servlet-name>
+        <servlet-class>mas.controller.LogoutController</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ReportFormController</servlet-name>
+        <servlet-class>mas.controller.ReportFormController</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ReportViewController</servlet-name>
+        <servlet-class>mas.controller.ReportViewController</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ReportViewAllController</servlet-name>
+        <servlet-class>mas.controller.ReportViewAllController</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ReportCreateController</servlet-name>
+        <servlet-class>mas.controller.ReportCreateController</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ErrorController</servlet-name>
+        <servlet-class>mas.controller.ErrorController</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -25,18 +65,81 @@
     </servlet-mapping>
 
     <servlet-mapping>
-        <servlet-name>HelloServlet</servlet-name>
-        <url-pattern>/hello</url-pattern>
+        <servlet-name>AuthenticationController</servlet-name>
+        <url-pattern>/login</url-pattern>
     </servlet-mapping>
 
-    <resource-ref>
-        <description>DbConnection</description>
-        <res-ref-name>jdbc/DerbyDatabase</res-ref-name>
-        <res-type>javax.sql.DataSource</res-type>
-        <res-auth>Container</res-auth>
-    </resource-ref>
-    
+    <servlet-mapping>
+        <servlet-name>DashboardController</servlet-name>
+        <url-pattern>/dashboard/view</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>WelcomeController</servlet-name>
+        <url-pattern>/welcome</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>LogoutController</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ReportFormController</servlet-name>
+        <url-pattern>/report/form</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ReportViewController</servlet-name>
+        <url-pattern>/report/view</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ReportViewAllController</servlet-name>
+        <url-pattern>/report/view/all</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ErrorController</servlet-name>
+        <url-pattern>/error</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ReportCreateController</servlet-name>
+        <url-pattern>/report/create</url-pattern>
+    </servlet-mapping>
+
     <listener>
-        <listener-class>mas.util.MyBatisSqlSessionFactoryProvider</listener-class>
+        <listener-class>mas.manager.MyBatisSqlSessionManager</listener-class>
     </listener>
+
+    <listener>
+        <listener-class>mas.manager.ExtentManager</listener-class>
+    </listener>
+
+    <error-page>
+        <!-- Missing login -->
+        <error-code>401</error-code>
+        <location>/frontend/view/error.jsp</location>
+    </error-page>
+    <error-page>
+        <!-- Forbidden directory listing -->
+        <error-code>403</error-code>
+        <location>/frontend/view/error.jsp</location>
+    </error-page>
+    <error-page>
+        <!-- Missing resource -->
+        <error-code>404</error-code>
+        <location>/frontend/view/error.jsp</location>
+    </error-page>
+    <error-page>
+        <!-- Uncaught exception -->
+        <error-code>500</error-code>
+        <location>/frontend/view/error.jsp</location>
+    </error-page>
+    <error-page>
+        <!-- Unsupported servlet method -->
+        <error-code>503</error-code>
+        <location>/frontend/view/error.jsp</location>
+    </error-page>
 </web-app>

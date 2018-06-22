@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mas.mapper.AuthMapper">
+
+    <sql id="selectAuth">
+        SELECT
+            AUT_EMP_ID id,
+            AUT_LOGIN login,
+            AUT_HASH hash
+        FROM MAS_EMP_AUTH
+    </sql>
+
+    <select id="selectAuthByLogin" resultType="AuthDTO">
+        <include refid="selectAuth"/>
+        WHERE AUT_LOGIN = #{login}
+    </select>
+</mapper>

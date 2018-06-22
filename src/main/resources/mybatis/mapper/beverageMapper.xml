@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mas.mapper.BeverageMapper">
+
+    <sql id="selectBeverage">
+        SELECT
+            BEV_ID id,
+            BEV_TEM_ID templateId,
+            BEV_ORD_ID orderId,
+            BEV_BAT_ID batchId,
+            BEV_FILL_DATE createDate
+        FROM MAS_BEVERAGE
+    </sql>
+
+    <select id="selectBeverageById" resultType="BeverageDTO">
+        <include refid="selectBeverage"/>
+        WHERE BEV_ID = #{id}
+    </select>
+
+    <select id="selectBeveragesByIds" resultType="BeverageDTO">
+        <include refid="selectBeverage"/>
+        WHERE BEV_ID IN
+          <foreach item="id" collection="list" open="(" separator="," close=")">
+              #{id}
+          </foreach>
+    </select>
+
+    <select id="selectAllBeverages" resultType="BeverageDTO">
+        <include refid="selectBeverage"/>
+    </select>
+
+    <insert id="insertBeverage">
+        INSERT INTO MAS_BEVERAGE (
+            BEV_ID,
+            BEV_TEM_ID,
+            BEV_ORD_ID,
+            BEV_FILL_DATE,
+            BEV_BAT_ID
+        )
+        VALUES (
+            MAS_BEVERAGE_SEQ.nextval,
+            #{beverage.templateId},
+            #{beverage.orderId},
+            #{beverage.createDate},
+            #{beverage.batchId}
+        )
+    </insert>
+
+    <delete id="deleteBeverageById">
+        DELETE FROM MAS_BEVERAGE
+        WHERE BEV_ID = #{id}
+    </delete>
+
+    <delete id="deleteBeveragesByIds">
+        DELETE FROM MAS_BEVERAGE
+        WHERE BEV_ID in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

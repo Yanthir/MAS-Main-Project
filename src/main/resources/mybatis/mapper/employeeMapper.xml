@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mas.mapper.EmployeeMapper">
+
+    <resultMap id="EmployeeDTOMap" type="EmployeeDTO">
+        <id column="id" property="id"/>
+        <result column="bankAccountNumber" property="bankAccountNumber"/>
+        <result column="phoneNumber" property="phoneNumber"/>
+        <result column="employmentDate" property="employmentDate"/>
+        <result column="name" property="name"/>
+        <result column="surname" property="surname"/>
+        <result column="address" property="address"/>
+        <collection property="roleIds" javaType="List" ofType="string">
+            <result column="roleId"/>
+        </collection>
+    </resultMap>
+
+    <sql id="selectEmployee">
+        SELECT
+            EMP_PER_ID id,
+            EMP_ACCOUNT_NUMBER bankAccountNumber,
+            EMP_PHONE_NUMBER phoneNumber,
+            EMP_VALID_FROM employmentDate,
+            PER_NAME name,
+            PER_SURNAME surname,
+            PER_ADDRESS address,
+            ROL_ID roleId
+        FROM MAS_EMPLOYEE
+        JOIN MAS_PERSON ON MAS_EMPLOYEE.EMP_PER_ID = MAS_PERSON.PER_ID
+        LEFT JOIN MAS_EMP_ROL ON MAS_EMPLOYEE.EMP_PER_ID = MAS_EMP_ROL.ERO_EMP_ID
+        LEFT JOIN MAS_ROLE ON MAS_EMP_ROL.ERO_ROL_ID = MAS_ROLE.ROL_ID
+    </sql>
+
+    <select id="selectEmployeeById" resultMap="EmployeeDTOMap">
+        <include refid="selectEmployee"/>
+        WHERE EMP_PER_ID = #{id}
+    </select>
+
+    <select id="selectEmployeesByIds" resultMap="EmployeeDTOMap">
+        <include refid="selectEmployee"/>
+        WHERE EMP_PER_ID IN
+          <foreach item="id" collection="list" open="(" separator="," close=")">
+              #{id}
+          </foreach>
+    </select>
+
+    <select id="selectAllEmployees" resultMap="EmployeeDTOMap">
+        <include refid="selectEmployee"/>
+    </select>
+
+    <update id="updateEmployee">
+        UPDATE MAS_PERSON
+        SET PER_NAME = #{employee.name},
+            PER_SURNAME = #{employee.surname},
+            PER_ADDRESS = #{employee.address}
+        WHERE PER_ID = #{employee.id};
+        UPDATE MAS_EMPLOYEE
+        SET EMP_ACCOUNT_NUMBER = #{employee.bankAccountNumber},
+            EMP_PHONE_NUMBER = #{employee.phoneNumber}
+        WHERE EMP_PER_ID = #{employee.id}
+    </update>
+
+    <insert id="insertEmployee">
+        INSERT INTO MAS_PERSON (
+            PER_ID,
+            PER_SURNAME,
+            PER_NAME,
+            PER_ADDRESS
+        )
+        VALUES (
+            MAS_PERSON_SEQ.nextval,
+            #{client.surname},
+            #{client.name},
+            #{client.address}
+        );
+        INSERT INTO MAS_EMPLOYEE (
+            EMP_PER_ID,
+            EMP_ACCOUNT_NUMBER,
+            EMP_PHONE_NUMBER,
+            EMP_VALID_FROM
+        )
+        VALUES (
+            MAS_PERSON_SEQ.nextval,
+            #{employee.bankAccountNumber},
+            #{employee.phoneNumber},
+            #{employee.employmentDate}
+        )
+    </insert>
+
+    <delete id="deleteEmployeeById">
+        DELETE FROM MAS_EMPLOYEE
+        WHERE EMP_PER_ID = #{id}
+    </delete>
+
+    <delete id="deleteEmployeesByIds">
+        DELETE FROM MAS_EMPLOYEE
+        WHERE EMP_PER_ID in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

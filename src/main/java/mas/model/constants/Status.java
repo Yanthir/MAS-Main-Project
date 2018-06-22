@@ -6,5 +6,24 @@ public enum Status {
     REJECTED,
     DAMAGED,
     EXPIRED,
-    DEPLETED
+    DEPLETED;
+
+    public String toString() {
+        switch (this) {
+            case PENDING:
+                return "Oczekująca";
+            case ACCEPTED:
+                return "Zaakceptowana";
+            case REJECTED:
+                return "Odrzucona";
+            case DAMAGED:
+                return "Uszkodzona";
+            case EXPIRED:
+                return "Przeterminowana";
+            case DEPLETED:
+                return "Zużyta";
+            default:
+                return null;
+        }
+    }
 }

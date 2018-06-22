@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mas.mapper.OrderMapper">
+
+    <sql id="selectOrder">
+        SELECT
+            ORD_ID id,
+            ORD_CLI_ID clientId,
+            ORD_CREATE_DATE submissionDate,
+            ORD_DELIVERY_DATE deliveryDate,
+            ORD_PRICE price
+        FROM MAS_ORDER
+    </sql>
+
+    <select id="selectOrderById" resultType="OrderDTO">
+        <include refid="selectOrder"/>
+        WHERE ORD_ID = #{id}
+    </select>
+
+    <select id="selectOrdersByIds" resultType="OrderDTO">
+        <include refid="selectOrder"/>
+        WHERE ORD_ID IN
+          <foreach item="id" collection="list" open="(" separator="," close=")">
+              #{id}
+          </foreach>
+    </select>
+
+    <select id="selectAllOrders" resultType="OrderDTO">
+        <include refid="selectOrder"/>
+    </select>
+
+    <update id="updateOrder">
+        UPDATE MAS_ORDER
+        SET ORD_DELIVERY_DATE = #{order.deliveryDate},
+            ORD_PRICE = #{order.price}
+        WHERE ORD_ID = #{order.id}
+    </update>
+
+    <insert id="insertOrder">
+        INSERT INTO MAS_ORDER (
+            ORD_ID,
+            ORD_CLI_ID,
+            ORD_CREATE_DATE,
+            ORD_DELIVERY_DATE,
+            ORD_PRICE
+        )
+        VALUES (
+            MAS_ORDER_SEQ.nextval,
+            #{order.clientId},
+            #{order.createDate},
+            #{order.deliveryDate},
+            #{order.price}
+        )
+    </insert>
+
+    <delete id="deleteOrderById">
+        DELETE FROM MAS_ORDER
+        WHERE ORD_ID = #{id}
+    </delete>
+
+    <delete id="deleteOrdersByIds">
+        DELETE FROM MAS_ORDER
+        WHERE ORD_ID in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

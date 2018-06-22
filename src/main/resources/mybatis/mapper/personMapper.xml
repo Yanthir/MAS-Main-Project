@@ -1,21 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper
-        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        PUBLIC "-//myperis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="Person">
-    <resultMap id="personResultMap" type="Person">
-        <id column="id" property="id"/>
-        <result column="name" property="name"/>
-        <result column="surname" property="surname"/>
-    </resultMap>
-    
-    <select id="selectPersonById" resultMap="personResultMap">
+<mapper namespace="mas.mapper.PersonMapper">
+
+    <sql id="selectPerson">
         SELECT
-          OSB_ID id,
-          OSB_NAME name,
-          OSB_SURNAME surname
-        FROM MAS_OSOBA
-        WHERE OSB_ID = #{id}
+            PER_ID id,
+            PER_NAME name,
+            PER_SURNAME surname,
+            PER_ADDRESS address
+        FROM MAS_PERSON
+    </sql>
+
+    <select id="selectPersonById" resultType="PersonDTO">
+        <include refid="selectPerson"/>
+        WHERE PER_ID = #{id}
     </select>
+
+    <select id="selectPersonsByIds" resultType="PersonDTO">
+        <include refid="selectPerson"/>
+        WHERE PER_ID IN
+          <foreach item="id" collection="list" open="(" separator="," close=")">
+              #{id}
+          </foreach>
+    </select>
+
+    <select id="selectAllPersons" resultType="PersonDTO">
+        <include refid="selectPerson"/>
+    </select>
+
+    <update id="updatePerson">
+        UPDATE MAS_PERSON
+        SET PER_NAME = #{person.name},
+            PER_SURNAME = #{person.surname},
+            PER_ADDRESS = #{person.address}
+        WHERE PER_ID = #{person.id}
+    </update>
+
+    <insert id="insertPerson">
+        INSERT INTO MAS_PERSON (PER_SURNAME, PER_NAME, PER_ADDRESS)
+        VALUES (
+            #{person.surname},
+            #{person.name},
+            #{person.address}
+        )
+    </insert>
+
+    <delete id="deletePersonById">
+        DELETE FROM MAS_PERSON
+        WHERE PER_ID = #{id}
+    </delete>
+
+    <delete id="deletePersonsByIds">
+        DELETE FROM MAS_PERSON
+        WHERE PER_ID in 
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
 </mapper>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mas.mapper.RecipeMapper">
+
+    <sql id="selectRecipe">
+        SELECT
+            REC_ID id,
+            REC_NAME name,
+            REC_DESCRIPTION description,
+            REC_PRICE price
+        FROM MAS_RECIPE
+    </sql>
+
+    <select id="selectRecipeById" resultType="RecipeDTO">
+        <include refid="selectRecipe"/>
+        WHERE REC_ID = #{id}
+    </select>
+
+    <select id="selectRecipesByIds" resultType="RecipeDTO">
+        <include refid="selectRecipe"/>
+        WHERE REC_ID IN
+          <foreach item="id" collection="list" open="(" separator="," close=")">
+              #{id}
+          </foreach>
+    </select>
+
+    <select id="selectAllRecipes" resultType="RecipeDTO">
+        <include refid="selectRecipe"/>
+    </select>
+
+    <update id="updateRecipe">
+        UPDATE MAS_RECIPE
+        SET REC_NAME = #{recipe.name},
+            REC_DESCRIPTION = #{recipe.description},
+            REC_PRICE = #{recipe.price}
+        WHERE REC_ID = #{recipe.id}
+    </update>
+
+    <insert id="insertRecipe">
+        INSERT INTO MAS_RECIPE (
+            REC_ID,
+            REC_NAME,
+            REC_DESCRIPTION,
+            REC_PRICE
+        )
+        VALUES (
+            MAS_RECIPE_SEQ.nextval,
+            #{recipe.name},
+            #{recipe.description},
+            #{recipe.price}
+        )
+    </insert>
+
+    <delete id="deleteRecipeById">
+        DELETE FROM MAS_RECIPE
+        WHERE REC_ID = #{id}
+    </delete>
+
+    <delete id="deleteRecipesByIds">
+        DELETE FROM MAS_RECIPE
+        WHERE REC_ID in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

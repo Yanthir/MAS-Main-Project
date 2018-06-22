@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mas.mapper.IngredientMapper">
+
+    <sql id="selectIngredient">
+        SELECT
+            ING_ID id,
+            ING_SUP_ID supplierId,
+            ING_NAME name,
+            ING_PRICE_PER_KG pricePerKilo,
+            ING_YIELD_PER_KG yieldPerKilo
+        FROM MAS_INGREDIENT
+    </sql>
+
+    <select id="selectIngredientById" resultType="IngredientDTO">
+        <include refid="selectIngredient"/>
+        WHERE ING_ID = #{id}
+    </select>
+
+    <select id="selectIngredientsByIds" resultType="IngredientDTO">
+        <include refid="selectIngredient"/>
+        WHERE ING_ID IN
+          <foreach item="id" collection="list" open="(" separator="," close=")">
+              #{id}
+          </foreach>
+    </select>
+
+    <select id="selectAllIngredients" resultType="IngredientDTO">
+        <include refid="selectIngredient"/>
+    </select>
+
+    <update id="updateIngredient">
+        UPDATE MAS_INGREDIENT
+        SET ING_NAME = #{ingredient.name},
+            ING_PRICE_PER_KG = #{ingredient.pricePerKilo},
+            ING_YIELD_PER_KG = #{ingredient.yieldPerKilo}
+        WHERE ING_ID = #{ingredient.id}
+    </update>
+
+    <insert id="insertIngredient">
+        INSERT INTO MAS_INGREDIENT (
+            ING_ID,
+            ING_NAME,
+            ING_PRICE_PER_KG,
+            ING_YIELD_PER_KG,
+            ING_SUP_ID
+        )
+        VALUES (
+            MAS_INGREDIENT_SEQ.nextval,
+            #{ingredient.name},
+            #{ingredient.pricePerKilo},
+            #{ingredient.yieldPerKilo},
+            #{ingredient.supplierId}
+        )
+    </insert>
+
+    <delete id="deleteIngredientById">
+        DELETE FROM MAS_INGREDIENT
+        WHERE ING_ID = #{id}
+    </delete>
+
+    <delete id="deleteIngredientsByIds">
+        DELETE FROM MAS_INGREDIENT
+        WHERE ING_ID in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

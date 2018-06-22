@@ -5,7 +5,23 @@
 
 <configuration>
     <typeAliases>
-        <typeAlias alias="Person" type="mas.model.Person"/>
+        <typeAlias alias="AuthDTO" type="mas.model.dto.AuthDTO"/>
+        <typeAlias alias="BatchDTO" type="mas.model.dto.BatchDTO"/>
+        <typeAlias alias="BeverageDTO" type="mas.model.dto.BeverageDTO"/>
+        <typeAlias alias="ClientDTO" type="mas.model.dto.ClientDTO"/>
+        <typeAlias alias="EmployeeDTO" type="mas.model.dto.EmployeeDTO"/>
+        <typeAlias alias="IngredientDTO" type="mas.model.dto.IngredientDTO"/>
+        <typeAlias alias="IngredientVolumeDTO" type="mas.model.dto.IngredientVolumeDTO"/>
+        <typeAlias alias="OrderDTO" type="mas.model.dto.OrderDTO"/>
+        <typeAlias alias="PersonDTO" type="mas.model.dto.PersonDTO"/>
+        <typeAlias alias="RecipeDTO" type="mas.model.dto.RecipeDTO"/>
+        <typeAlias alias="ReportDTO" type="mas.model.dto.ReportDTO"/>
+        <typeAlias alias="SetDTO" type="mas.model.dto.SetDTO"/>
+        <typeAlias alias="SubscriptionDTO" type="mas.model.dto.SubscriptionDTO"/>
+        <typeAlias alias="SupplierDTO" type="mas.model.dto.SupplierDTO"/>
+        <typeAlias alias="TemplateDTO" type="mas.model.dto.TemplateDTO"/>
+        <typeAlias alias="TemplateQuantityDTO" type="mas.model.dto.TemplateQuantityDTO"/>
+        <typeAlias alias="VesselDTO" type="mas.model.dto.VesselDTO"/>
     </typeAliases>
 
     <environments default="development">
@@ -13,14 +29,30 @@
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
-                <property name="url" value="jdbc:oracle:thin:@db-oracle.pjwstk.edu.pl:1521:baza"/>
-                <property name="username" value="s13753"/>
-                <property name="password" value="oracle12"/>
+                <property name="url" value="jdbc:oracle:thin:@localhost:1521:local"/>
+                <property name="username" value="MAS"/>
+                <property name="password" value="MAS"/>
             </dataSource>
         </environment>
     </environments>
 
     <mappers>
+        <mapper resource="mybatis/mapper/authMapper.xml"/>
+        <mapper resource="mybatis/mapper/batchMapper.xml"/>
+        <mapper resource="mybatis/mapper/beverageMapper.xml"/>
+        <mapper resource="mybatis/mapper/clientMapper.xml"/>
+        <mapper resource="mybatis/mapper/employeeMapper.xml"/>
+        <mapper resource="mybatis/mapper/ingredientMapper.xml"/>
+        <mapper resource="mybatis/mapper/ingredientVolumeMapper.xml"/>
+        <mapper resource="mybatis/mapper/orderMapper.xml"/>
         <mapper resource="mybatis/mapper/personMapper.xml"/>
+        <mapper resource="mybatis/mapper/recipeMapper.xml"/>
+        <mapper resource="mybatis/mapper/reportMapper.xml"/>
+        <mapper resource="mybatis/mapper/setMapper.xml"/>
+        <mapper resource="mybatis/mapper/subscriptionMapper.xml"/>
+        <mapper resource="mybatis/mapper/supplierMapper.xml"/>
+        <mapper resource="mybatis/mapper/templateMapper.xml"/>
+        <mapper resource="mybatis/mapper/templateQuantityMapper.xml"/>
+        <mapper resource="mybatis/mapper/vesselMapper.xml"/>
     </mappers>
 </configuration>

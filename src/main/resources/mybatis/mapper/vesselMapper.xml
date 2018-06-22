@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mas.mapper.VesselMapper">
+
+    <sql id="selectVessel">
+        SELECT
+            VES_ID id,
+            VES_SUP_ID supplierId,
+            VES_NAME name,
+            VES_VOLUME volume,
+            VES_PRICE price,
+            VES_STOCK stock
+        FROM MAS_VESSEL
+    </sql>
+
+    <select id="selectVesselById" resultType="VesselDTO">
+        <include refid="selectVessel"/>
+        WHERE VES_ID = #{id}
+    </select>
+
+    <select id="selectVesselsByIds" resultType="VesselDTO">
+        <include refid="selectVessel"/>
+        WHERE VES_ID IN
+          <foreach item="id" collection="list" open="(" separator="," close=")">
+              #{id}
+          </foreach>
+    </select>
+
+    <select id="selectAllVessels" resultType="VesselDTO">
+        <include refid="selectVessel"/>
+    </select>
+
+    <update id="updateVessel">
+        UPDATE MAS_VESSEL
+        SET VES_NAME = #{vessel.name},
+            VES_VOLUME = #{vessel.volume},
+            VES_PRICE = #{vessel.price},
+            VES_STOCK = #{vessel.stock}
+        WHERE VES_ID = #{vessel.id}
+    </update>
+
+    <insert id="insertVessel">
+        INSERT INTO MAS_VESSEL (
+            VES_ID,
+            VES_NAME,
+            VES_VOLUME,
+            VES_PRICE,
+            VES_STOCK,
+            VES_SUP_ID
+        )
+        VALUES (
+            MAS_VESSEL_SEQ.nextval,
+            #{vessel.name},
+            #{vessel.columen},
+            #{vessel.price},
+            #{vessel.stock},
+            #{vessel.supplierId}
+        )
+    </insert>
+
+    <delete id="deleteVesselById">
+        DELETE FROM MAS_VESSEL
+        WHERE VES_ID = #{id}
+    </delete>
+
+    <delete id="deleteVesselsByIds">
+        DELETE FROM MAS_VESSEL
+        WHERE VES_ID in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

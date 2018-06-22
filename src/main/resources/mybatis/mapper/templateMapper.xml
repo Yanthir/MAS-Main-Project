@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mas.mapper.TemplateMapper">
+
+    <sql id="selectTemplate">
+        SELECT
+            TEM_ID id,
+            TEM_REC_ID recipeId,
+            TEM_VES_ID vesselId,
+            TEM_NAME name,
+            TEM_PRICE price
+        FROM MAS_TEMPLATE
+    </sql>
+
+    <select id="selectTemplateById" resultType="TemplateDTO">
+        <include refid="selectTemplate"/>
+        WHERE TEM_ID = #{id}
+    </select>
+
+    <select id="selectTemplatesByIds" resultType="TemplateDTO">
+        <include refid="selectTemplate"/>
+        WHERE TEM_ID IN
+          <foreach item="id" collection="list" open="(" separator="," close=")">
+              #{id}
+          </foreach>
+    </select>
+
+    <select id="selectAllTemplates" resultType="TemplateDTO">
+        <include refid="selectTemplate"/>
+    </select>
+
+    <update id="updateTemplate">
+        UPDATE MAS_TEMPLATE
+        SET TEM_NAME = #{template.name},
+            TEM_PRICE = #{template.price}
+        WHERE TEM_ID = #{template.id}
+    </update>
+
+    <insert id="insertTemplate">
+        INSERT INTO MAS_TEMPLATE (
+            TEM_ID,
+            TEM_NAME,
+            TEM_PRICE,
+            TEM_VES_ID,
+            TEM_REC_ID
+        )
+        VALUES (
+            MAS_TEMPLATE_SEQ.nextval,
+            #{template.name},
+            #{template.price},
+            #{template.vesselId},
+            #{template.recipeId}
+        )
+    </insert>
+
+    <delete id="deleteTemplateById">
+        DELETE FROM MAS_TEMPLATE
+        WHERE TEM_ID = #{id}
+    </delete>
+
+    <delete id="deleteTemplatesByIds">
+        DELETE FROM MAS_TEMPLATE
+        WHERE TEM_ID in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

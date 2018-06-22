@@ -16,7 +16,7 @@ public class AssociationNames {
         ASSOC_INGREDIENT_VOLUME_RECIPE = "ingredientVolumeRecipe",
         ASSOC_INGREDIENT_VOLUME_INGREDIENT = "ingredientVolumeIngredient",
 
-        ASSOC_INGREDIENT_VOLUMES_FOR_RECIPES = "ingredientVolumesForRecipes",
+        ASSOC_INGREDIENT_INGREDIENT_VOLUMES = "ingredientIngredientVolumes",
         ASSOC_INGREDIENT_SUPPLIER = "ingredientSupplier",
 
         ASSOC_SUPPLIER_INGREDIENTS = "supplierIngredients",
@@ -27,17 +27,20 @@ public class AssociationNames {
 
         ASSOC_TEMPLATE_VESSEL = "templateVessel",
         ASSOC_TEMPLATE_RECIPE = "templateRecipe",
-        ASSOC_TEMPLATE_SETS = "templateSets",
+        ASSOC_TEMPLATE_TEMPLATE_QUANTITIES = "templateTemplateQuantities",
         ASSOC_TEMPLATE_BEVERAGES = "templateBeverages",
 
-        ASSOC_SET_TEMPLATES = "setTemplates",
-        ASSOC_SET_SUBSRIPTIONS = "setSubscriptions",
+        ASSOC_TEMPLATE_QUANTITY_SET = "templateQuantitySet",
+        ASSOC_TEMPLATE_QUANTITY_TEMPLATE = "templateQuantityTemplate",
 
-        ASSOC_CLIENT_ORDER = "clientOrder",
-        ASSOC_CLIENT_SUBSCRIPTION = "clientSubscription",
+        ASSOC_SET_TEMPLATE_QUANTITIES = "setTemplateQuantities",
+        ASSOC_SET_SUBSCRIPTIONS = "setSubscriptions",
 
-        ASSOC_SUBSRIPTION_SET = "subscriptionSet",
-        ASSOC_SUBSRIPTION_CLIENT = "subscriptionClient",
+        ASSOC_CLIENT_ORDERS = "clientOrder",
+        ASSOC_CLIENT_SUBSCRIPTIONS = "clientSubscription",
+
+        ASSOC_SUBSCRIPTION_SET = "subscriptionSet",
+        ASSOC_SUBSCRIPTION_CLIENT = "subscriptionClient",
 
         ASSOC_BEVERAGE_TEMPLATE = "beverageTemplate",
         ASSOC_BEVERAGE_ORDER = "beverageOrder",
