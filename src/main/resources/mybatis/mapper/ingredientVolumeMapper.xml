@@ -33,8 +33,8 @@
 
     <update id="updateIngredientVolume">
         UPDATE MAS_ING_IN_REC
-        SET IIR_VOLUME = #{ingredientVolume.volume}
-        WHERE IIR_ID = #{ingredientVolume.id}
+        SET IIR_VOLUME = #{volume}
+        WHERE IIR_ID = #{id}
     </update>
 
     <insert id="insertIngredientVolume">
@@ -46,9 +46,9 @@
         )
         VALUES (
             MAS_ING_IN_REC_SEQ.nextval,
-            #{ingredientVolume.ingredientId},
-            #{ingredientVolume.recipeId},
-            #{ingredientVolume.volume}
+            #{ingredientId},
+            #{recipeId},
+            #{volume}
         )
     </insert>
 

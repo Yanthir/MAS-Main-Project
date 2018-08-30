@@ -11,7 +11,7 @@ import java.util.List;
 public class ClientMapper extends AbstractMapper {
 
     public static ClientDTO selectClientById(@Param("id") String id) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             return session.selectOne("selectClientById", id);
         } finally {
             closeAllConnections();
@@ -19,7 +19,7 @@ public class ClientMapper extends AbstractMapper {
     }
 
     public static List<ClientDTO> selectClientsByIds(@Param("id") List<String> ids) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             return session.selectList("selectClientsByIds", ids);
         } finally {
             closeAllConnections();
@@ -27,7 +27,7 @@ public class ClientMapper extends AbstractMapper {
     }
 
     public static List<ClientDTO> selectAllClients() {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             return session.selectList("selectAllClients");
         } finally {
             closeAllConnections();
@@ -35,7 +35,7 @@ public class ClientMapper extends AbstractMapper {
     }
 
     public static void updateClient(@Param("client") ClientDTO client) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.update("updateClient", client);
         } finally {
             closeAllConnections();
@@ -43,7 +43,7 @@ public class ClientMapper extends AbstractMapper {
     }
 
     public static void insertClient(@Param("client") ClientDTO client) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.insert("insertClient", client);
         } finally {
             closeAllConnections();
@@ -51,14 +51,14 @@ public class ClientMapper extends AbstractMapper {
     }
 
     public static void deleteClientById(@Param("id") String id) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.delete("deleteClientById", id);
         } finally {
             closeAllConnections();
         }
     }
     public static void deleteClientsByIds(@Param("ids") List<String> ids) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.delete("deleteClientsByIds", ids);
         } finally {
             closeAllConnections();

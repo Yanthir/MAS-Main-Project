@@ -1,61 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="MAS" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="366ec19d-e80b-4558-88b8-36f6980c3909" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_10_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_28.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_28.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_28.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_7_Final.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_5.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_20.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_0_0_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_0_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_0_0_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_0_0_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_0_0_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_0_0_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_0_0_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mas/controller/HelloWorldController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mas/main/Main.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mas/model/HelloWorldModel.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mas/request/HelloWorldRequest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mas/response/HelloWorldResponse.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mas/service/HelloWorldService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mas/service/impl/HelloWorldServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/data/beverage.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/data/header/beverage.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/data/header/order.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/data/order.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mas/controller/BeverageViewController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mas/controller/OrderViewController.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/MAS_0.iml" afterPath="$PROJECT_DIR$/MAS.iml" />
+      <change beforePath="$PROJECT_DIR$/MAS.iml" afterPath="$PROJECT_DIR$/MAS.iml" />
+      <change beforePath="$PROJECT_DIR$/frontend/data/header/report.jsp" afterPath="$PROJECT_DIR$/frontend/data/header/report.jsp" />
+      <change beforePath="$PROJECT_DIR$/frontend/data/report.jsp" afterPath="$PROJECT_DIR$/frontend/data/report.jsp" />
+      <change beforePath="$PROJECT_DIR$/frontend/form/report.jsp" afterPath="$PROJECT_DIR$/frontend/form/report.jsp" />
+      <change beforePath="$PROJECT_DIR$/frontend/main.jsp" afterPath="$PROJECT_DIR$/frontend/main.jsp" />
+      <change beforePath="$PROJECT_DIR$/frontend/navbar/navbar.jsp" afterPath="$PROJECT_DIR$/frontend/navbar/navbar.jsp" />
+      <change beforePath="$PROJECT_DIR$/frontend/view/dashboard.jsp" afterPath="$PROJECT_DIR$/frontend/view/dashboard.jsp" />
+      <change beforePath="$PROJECT_DIR$/frontend/view/login.jsp" afterPath="$PROJECT_DIR$/frontend/view/login.jsp" />
       <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/sql/2018-06-20-01-54 CREATE DATABASE.sql" afterPath="$PROJECT_DIR$/sql/2018-06-20-01-54 CREATE DATABASE.sql" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/controller/AuthenticationController.java" afterPath="$PROJECT_DIR$/src/main/java/mas/controller/AuthenticationController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/controller/LogoutController.java" afterPath="$PROJECT_DIR$/src/main/java/mas/controller/LogoutController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/controller/ReportCreateController.java" afterPath="$PROJECT_DIR$/src/main/java/mas/controller/ReportCreateController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/mapper/AuthMapper.java" afterPath="$PROJECT_DIR$/src/main/java/mas/mapper/AuthMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/mapper/BatchMapper.java" afterPath="$PROJECT_DIR$/src/main/java/mas/mapper/BatchMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/mapper/BeverageMapper.java" afterPath="$PROJECT_DIR$/src/main/java/mas/mapper/BeverageMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/mapper/ClientMapper.java" afterPath="$PROJECT_DIR$/src/main/java/mas/mapper/ClientMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/mapper/EmployeeMapper.java" afterPath="$PROJECT_DIR$/src/main/java/mas/mapper/EmployeeMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/mapper/IngredientMapper.java" afterPath="$PROJECT_DIR$/src/main/java/mas/mapper/IngredientMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/mapper/IngredientVolumeMapper.java" afterPath="$PROJECT_DIR$/src/main/java/mas/mapper/IngredientVolumeMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/mapper/OrderMapper.java" afterPath="$PROJECT_DIR$/src/main/java/mas/mapper/OrderMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/mapper/PersonMapper.java" afterPath="$PROJECT_DIR$/src/main/java/mas/mapper/PersonMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/mapper/RecipeMapper.java" afterPath="$PROJECT_DIR$/src/main/java/mas/mapper/RecipeMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/mapper/ReportMapper.java" afterPath="$PROJECT_DIR$/src/main/java/mas/mapper/ReportMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/mapper/SetMapper.java" afterPath="$PROJECT_DIR$/src/main/java/mas/mapper/SetMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/mapper/SubscriptionMapper.java" afterPath="$PROJECT_DIR$/src/main/java/mas/mapper/SubscriptionMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/mapper/SupplierMapper.java" afterPath="$PROJECT_DIR$/src/main/java/mas/mapper/SupplierMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/mapper/TemplateMapper.java" afterPath="$PROJECT_DIR$/src/main/java/mas/mapper/TemplateMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/mapper/TemplateQuantityMapper.java" afterPath="$PROJECT_DIR$/src/main/java/mas/mapper/TemplateQuantityMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/mapper/VesselMapper.java" afterPath="$PROJECT_DIR$/src/main/java/mas/mapper/VesselMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/model/business/Batch.java" afterPath="$PROJECT_DIR$/src/main/java/mas/model/business/Batch.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/model/business/Beverage.java" afterPath="$PROJECT_DIR$/src/main/java/mas/model/business/Beverage.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/model/business/Order.java" afterPath="$PROJECT_DIR$/src/main/java/mas/model/business/Order.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/model/business/Recipe.java" afterPath="$PROJECT_DIR$/src/main/java/mas/model/business/Recipe.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/model/business/Report.java" afterPath="$PROJECT_DIR$/src/main/java/mas/model/business/Report.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/model/business/Set.java" afterPath="$PROJECT_DIR$/src/main/java/mas/model/business/Set.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/service/AuthService.java" afterPath="$PROJECT_DIR$/src/main/java/mas/service/AuthService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mas/service/ReportService.java" afterPath="$PROJECT_DIR$/src/main/java/mas/service/ReportService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/authMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/authMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/batchMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/batchMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/beverageMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/beverageMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/clientMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/clientMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/employeeMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/employeeMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ingredientMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ingredientMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ingredientVolumeMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ingredientVolumeMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/orderMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/orderMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/personMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/personMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/recipeMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/recipeMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/reportMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/reportMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/setMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/setMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/subscriptionMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/subscriptionMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/supplierMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/supplierMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/templateMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/templateMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/templateQuantityMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/templateQuantityMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/vesselMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/vesselMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/web.xml" afterPath="$PROJECT_DIR$/web.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -69,86 +84,130 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/MAS_0$Main.coverage" NAME="Main Coverage Results" MODIFIED="1520809311572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Local MAS" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Local MAS" type="feb32156:DbDataSourceImpl" />
+        <item name="MAS: schema" type="ac44c5e0:OracleImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Local MAS" type="feb32156:DbDataSourceImpl" />
+        <item name="MAS: schema" type="ac44c5e0:OracleImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Local MAS" type="feb32156:DbDataSourceImpl" />
+        <item name="MAS: schema" type="ac44c5e0:OracleImplModel$Schema" />
+        <item name="sequences" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="MAS_Projekt_Semestralny" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="order.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/data/order.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            <state relative-caret-position="349">
+              <caret line="54" column="17" lean-forward="false" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mas/main/Main.java">
+      <file leaf-file-name="beverage.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/data/beverage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#326#327#0" expanded="true" />
-                <element signature="e#381#382#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HelloWorldController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mas/controller/HelloWorldController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#691#692#0" expanded="true" />
-                <element signature="e#1024#1025#0" expanded="true" />
-                <element signature="e#1061#1062#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HelloWorldService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mas/service/HelloWorldService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+            <state relative-caret-position="748">
+              <caret line="52" column="11" lean-forward="false" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HelloWorldServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mas/service/impl/HelloWorldServiceImpl.java">
+      <file leaf-file-name="beverage.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/data/header/beverage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#291#292#0" expanded="true" />
-                <element signature="e#328#329#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HelloWorldResponse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mas/response/HelloWorldResponse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="154">
+              <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HelloWorldRequest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mas/request/HelloWorldRequest.java">
+      <file leaf-file-name="order.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/data/header/order.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="132">
+              <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DashboardController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mas/controller/DashboardController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="72" column="29" lean-forward="false" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="report.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/data/report.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-682">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Beverage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mas/model/business/Beverage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="70" column="17" lean-forward="false" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/main.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -159,14 +218,77 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>lom</find>
+      <find>Batchs</find>
+      <find>\}</find>
+      <find>MAS.</find>
+      <find>void load</find>
+      <find>void load(.*?)(e*?s\(\))</find>
+      <find>List&lt;(.*?)&gt; load</find>
+      <find>(\w.*?)Service</find>
+      <find>batchId</find>
+      <find>Batch</find>
+      <find>col-md</find>
+      <find>form</find>
+      <find>raport</find>
+      <find>/error</find>
+      <find>\n        request\.getRequestDispatcher\(\&quot;\/error\&quot;\)\.forward\(request\, response\)\;</find>
+      <find>view/all</find>
+      <find>viewall</find>
+      <find>.map(beverage -&gt; (Beverage) beverage)                    .collect(Collectors.toList());</find>
+      <find>getLinkedObjects</find>
+      <find>#\{.*?\.(.*?)\}</find>
+      <find>openSession()</find>
+      <find>keyProperty</find>
+      <find>100</find>
+      <find>z&gt;</find>
+      <find>userId</find>
+      <find>report.jsp</find>
+      <find>dateformatutils</find>
+      <find>DateFormatUtils</find>
+      <find>orderId&quot;</find>
+      <find>compose</find>
+      <find>class=</find>
     </findStrings>
+    <replaceStrings>
+      <replace>set</replace>
+      <replace>vessel</replace>
+      <replace>template</replace>
+      <replace>Employee</replace>
+      <replace>Beverage</replace>
+      <replace>Ingredient</replace>
+      <replace>IngredientVolume</replace>
+      <replace>Batch</replace>
+      <replace>Order</replace>
+      <replace>Recipe</replace>
+      <replace>Report</replace>
+      <replace>Set</replace>
+      <replace>Subscription</replace>
+      <replace>Supplier</replace>
+      <replace>Template</replace>
+      <replace>TemplateQuantity</replace>
+      <replace>Batches</replace>
+      <replace>Mapper extends AbstractMapper \{</replace>
+      <replace>List&lt;$1&gt; load$1$2</replace>
+      <replace>List&lt;$1DTO&gt; load</replace>
+      <replace>$1 List&lt;$2DTO&gt; $2DTOS =</replace>
+      <replace>$1 List&lt;$2DTO&gt; $2DTOS = $2Service</replace>
+      <replace>List&lt;$2DTO&gt; $2DTOS = $2Service</replace>
+      <replace>List&lt;$1DTO&gt; $1DTOS = $1Service</replace>
+      <replace>Vessel</replace>
+      <replace>col</replace>
+      <replace>#\{$1\}</replace>
+      <replace>openSession(true)</replace>
+      <replace>view</replace>
+      <replace>10000</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -179,22 +301,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/response/hello/HelloWorldResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/HelloWorldModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/HelloWorldController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/HelloWorldService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/request/hello/HelloWorldRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/ErrorController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/request/HelloWorldRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/response/HelloWorldResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mas/response/HelloWorldResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/model/dto/SetDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/model/dto/SubscriptionDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/model/dto/SupplierDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/model/dto/TemplateDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/model/dto/TemplateQuantityDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/model/dto/VesselDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/mas/controller/ErrorController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mas/service/HelloWorldService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mas/service/impl/HelloWorldServiceImpl.java" />
+        <option value="$PROJECT_DIR$/frontend/util/authCheck.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/model/constants/Status.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/controller/ReportViewAllController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/controller/ReportViewController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/model/dto/ReportDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/model/business/Batch.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/model/business/Recipe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/model/business/Set.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/mapper/BatchMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/config.xml" />
+        <option value="$PROJECT_DIR$/sql/2018-06-20-01-54 CREATE DATABASE.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/batchMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/beverageMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/clientMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/reportMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/mapper/ReportMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/employeeMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ingredientMapper.xml" />
+        <option value="$PROJECT_DIR$/frontend/view/login.jsp" />
+        <option value="$PROJECT_DIR$/frontend/form/report.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/mas/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mas/controller/HelloWorldController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/service/ReportService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/model/business/ExtendedBusinessObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/model/business/Report.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/authMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/controller/LogoutController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/controller/ReportCreateController.java" />
+        <option value="$PROJECT_DIR$/frontend/navbar/navbar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/controller/OrderViewController.java" />
+        <option value="$PROJECT_DIR$/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/controller/BeverageViewController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/service/AuthService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/controller/AuthenticationController.java" />
+        <option value="$PROJECT_DIR$/frontend/view/dashboard.jsp" />
+        <option value="$PROJECT_DIR$/frontend/data/header/report.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/model/business/Order.java" />
+        <option value="$PROJECT_DIR$/frontend/data/report.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/mas/model/business/Beverage.java" />
+        <option value="$PROJECT_DIR$/frontend/data/header/beverage.jsp" />
+        <option value="$PROJECT_DIR$/frontend/data/beverage.jsp" />
+        <option value="$PROJECT_DIR$/frontend/style/custom.css" />
+        <option value="$PROJECT_DIR$/frontend/data/header/order.jsp" />
+        <option value="$PROJECT_DIR$/frontend/data/order.jsp" />
+        <option value="$PROJECT_DIR$/frontend/main.jsp" />
       </list>
     </option>
   </component>
@@ -217,6 +374,35 @@
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Internationalization</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Usability &gt; Icons</id>
+          </State>
+          <State>
+            <id>Internationalization issues</id>
+          </State>
+          <State>
+            <id>Internationalization issuesJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>WebSocket issues</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -235,37 +421,80 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="MAS_0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="MAS_0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="header" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="navbar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
+              <item name="sql" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="MAS_0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="MAS_0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="MAS_0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -273,7 +502,7 @@
               <item name="mas" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="MAS_0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -282,16 +511,34 @@
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="MAS_0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mas" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="MAS_0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mas" type="462c0819:PsiDirectoryNode" />
+              <item name="manager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mas" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -300,25 +547,17 @@
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="MAS_0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mas" type="462c0819:PsiDirectoryNode" />
-              <item name="request" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="MAS_0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mas" type="462c0819:PsiDirectoryNode" />
-              <item name="response" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MAS_0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -327,14 +566,64 @@
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="MAS_0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
               <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mas" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MAS_0" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MAS_Projekt_Semestralny" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MAS_Projekt_Semestralny" type="1abcf292:AndroidViewProjectNode" />
+              <item name="MAS" type="1039202d:NonAndroidModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MAS_Projekt_Semestralny" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MAS" type="616d4139:PackageViewModuleNode" />
             </path>
           </expand>
           <select />
@@ -345,24 +634,42 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/BusinessObject.jar!/" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Oracle" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Yanth\Desktop\Workspace\Studia\MAS\MainProject\MAS_0\frontend\data" />
+      <recent name="C:\Users\Yanth\Desktop\Workspace\Studia\MAS\MainProject\MAS_0\frontend\data\header" />
+      <recent name="C:\Users\Yanth\Desktop\Workspace\Studia\MAS\MainProject\MAS_0\frontend\form" />
+      <recent name="C:\Users\Yanth\Desktop\Workspace\Studia\MAS\MainProject\MAS_0\frontend\navbar" />
+      <recent name="C:\Users\Yanth\Desktop\Workspace\Studia\MAS\MainProject\MAS_0\frontend\view" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="mas.service.impl" />
+      <recent name="mas.controller" />
+      <recent name="mas.model.dto" />
+      <recent name="mas.service" />
+      <recent name="mas.mapper" />
+      <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Yanth\Desktop\Workspace\Studia\MAS\MainProject" />
+      <recent name="C:\Users\Yanth\Desktop\Workspace\Studia\MAS\MainProject\MAS_0\frontend\view" />
+      <recent name="C:\Users\Yanth\Desktop\Workspace\Studia\MAS\MainProject\MAS_0\src\main\resources\mybatis\mapper" />
+      <recent name="C:\Users\Yanth\Desktop\Workspace\Studia\MAS\MainProject\MAS_0\src\main\resources\mybatis" />
+      <recent name="C:\Users\Yanth\Desktop\Workspace\Studia\MAS\MainProject\MAS_0" />
+      <recent name="C:\Users\Yanth\Desktop\Workspace\Studia\MAS\MainProject\MAS_0\src\main\webapp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -377,7 +684,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Remote.Debug">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -431,6 +738,17 @@
       <module name="MAS_0" />
       <envs />
     </configuration>
+    <configuration name="Debug" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="5005" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -478,6 +796,10 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Remote.Debug" />
+      <item index="1" class="java.lang.String" itemvalue="Spring Boot.Main" />
+    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -495,48 +817,80 @@
       <workItem from="1520797838780" duration="2647000" />
       <workItem from="1520800818251" duration="3427000" />
       <workItem from="1520804762730" duration="4942000" />
+      <workItem from="1520876282703" duration="642000" />
+      <workItem from="1520889480442" duration="727000" />
+      <workItem from="1520890387835" duration="845000" />
+      <workItem from="1521146570365" duration="606000" />
+      <workItem from="1528368532610" duration="173000" />
+      <workItem from="1528639993191" duration="2885000" />
+      <workItem from="1529239443874" duration="1000" />
+      <workItem from="1529257897302" duration="13208000" />
+      <workItem from="1529304004031" duration="4875000" />
+      <workItem from="1529360397789" duration="14523000" />
+      <workItem from="1529430164042" duration="27559000" />
+      <workItem from="1529611303962" duration="4508000" />
+      <workItem from="1529616207896" duration="3104000" />
+      <workItem from="1529627975233" duration="778000" />
+      <workItem from="1529654452702" duration="46453000" />
+      <workItem from="1529838152553" duration="1869000" />
+      <workItem from="1529849297731" duration="4675000" />
+      <workItem from="1529854688651" duration="1550000" />
+      <workItem from="1535654139777" duration="3465000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11016000" />
+    <option name="totallyTimeSpent" value="143462000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2664437" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" x="0" y="364" width="1920" height="311" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.50208336" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24749164" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33110368" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3001066" sideWeight="0.4960981" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997879" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25556734" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27452025" sideWeight="0.5039019" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36120403" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -547,187 +901,551 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mas/controller/ReportFormController.java</url>
+          <line>11</line>
+          <properties />
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mas/controller/BeverageViewController.java</url>
+          <line>11</line>
+          <properties />
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mas/controller/DashboardController.java</url>
+          <line>11</line>
+          <properties />
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="68" />
     </breakpoint-manager>
     <watches-manager />
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>((HashMap.Node)((Object[])entrySet().toArray())[1]).getValue()</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>java.util.HashMap.Node,java.util.HashMap</custom-info>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>Beverage.getAll(Beverage.class)</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>mas.model.business.Beverage</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Order.getAll(Order.class)</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>mas.model.business.Beverage,mas.model.business.Order</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.getParameter(&quot;orderId&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.getParameter(&quot;asd&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.getParameter(&quot;password&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.getParameter(&quot;login&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Report.getById(Report.class, &quot;10006&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>mas.model.business.Report</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Batch.getAll(Batch.class)</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>mas.model.business.Batch</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>new String(request.getParameter(&quot;description&quot;).getBytes(&quot;ISO-8859-1&quot;), Charset.forName(&quot;UTF-8&quot;))</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>java.nio.charset.Charset</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/personMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="31" lean-forward="false" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
+        <state relative-caret-position="-132">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1529702557883" expanded="true" signature="246:391" ph="SELECT PER_I... MAS_PERSON" />
+            <marker date="1529702557883" expanded="true" signature="510:530" ph="WHERE PER_ID... " />
+            <marker date="1529702557883" expanded="true" signature="959:1112" ph="UPDATE MAS_PERSON... " />
+            <marker date="1529702557883" expanded="true" signature="1167:1321" ph="INSERT INTO MAS_PERSON... " />
+            <marker date="1529702557883" expanded="true" signature="1380:1431" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/2018-06-20-01-54 CREATE DATABASE.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="313" column="19" lean-forward="false" selection-start-line="313" selection-start-column="19" selection-end-line="313" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/ingredientVolumeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-858">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1529702557733" expanded="true" signature="266:423" ph="SELECT IIR_I... MAS_ING_IN_REC" />
+            <marker date="1529702557733" expanded="true" signature="1091:1176" ph="UPDATE MAS_ING_IN_REC... " />
+            <marker date="1529702557733" expanded="true" signature="1241:1513" ph="INSERT INTO MAS_ING_IN_REC... " />
+            <marker date="1529702557733" expanded="true" signature="1582:1637" ph="DELETE FROM MAS_ING_IN_REC... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/orderMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-528">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1529702557867" expanded="true" signature="244:445" ph="SELECT ORD_I... MAS_ORDER" />
+            <marker date="1529702557867" expanded="true" signature="1003:1130" ph="UPDATE MAS_ORDER... " />
+            <marker date="1529702557867" expanded="true" signature="1184:1507" ph="INSERT INTO MAS_ORDER... " />
+            <marker date="1529702557867" expanded="true" signature="1565:1615" ph="DELETE FROM MAS_ORDER... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mas/mapper/ReportMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="66" column="5" lean-forward="false" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mas/main/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/reportMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="330">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <marker date="1529706100740" expanded="true" signature="246:446" ph="SELECT REP_I... MAS_REPORT" />
+            <marker date="1529706100740" expanded="true" signature="1014:1105" ph="UPDATE MAS_REPORT... " />
+            <marker date="1529706100740" expanded="true" signature="1160:1487" ph="INSERT INTO MAS_REPORT... " />
+            <marker date="1529706100740" expanded="true" signature="1546:1597" ph="DELETE FROM MAS_REPORT... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/session/SqlSessionFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="12" column="15" lean-forward="false" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mas/mapper/BatchMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://sequence:/e8f717e5/aaba46a6-7273-4c04-894e-2c19b7b24b98/MAS.MAS_BATCH_SEQ">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/clientMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="64" column="34" lean-forward="false" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="34" />
+          <folding>
+            <marker date="1529706100788" expanded="true" signature="246:500" ph="SELECT CLI_P... MAS_CLIENT" />
+            <marker date="1529706100788" expanded="true" signature="1076:1229" ph="UPDATE MAS_PERSON... " />
+            <marker date="1529706100788" expanded="true" signature="1239:1329" ph="UPDATE MAS_CLIENT... " />
+            <marker date="1529706100788" expanded="true" signature="1384:1640" ph="INSERT INTO MAS_PERSON... " />
+            <marker date="1529706100788" expanded="true" signature="1650:1821" ph="INSERT INTO MAS_CLIENT... " />
+            <marker date="1529706100788" expanded="true" signature="1880:1935" ph="DELETE FROM MAS_CLIENT... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/employeeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="857">
+          <caret line="85" column="35" lean-forward="false" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
+          <folding>
+            <marker date="1529707634844" expanded="true" signature="855:1392" ph="SELECT EMP_P... MAS_EMPLOYEE" />
+            <marker date="1529707634844" expanded="true" signature="1994:2147" ph="UPDATE MAS_PERSON... " />
+            <marker date="1529707634844" expanded="true" signature="2157:2310" ph="UPDATE MAS_EMPLOYEE... " />
+            <marker date="1529707634844" expanded="true" signature="2367:2623" ph="INSERT INTO MAS_PERSON... " />
+            <marker date="1529707634844" expanded="true" signature="2633:2937" ph="INSERT INTO MAS_EMPLOYEE... " />
+            <marker date="1529707634844" expanded="true" signature="2998:3055" ph="DELETE FROM MAS_EMPLOYEE... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/batchMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-421">
+          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <folding>
+            <marker date="1529706100808" expanded="true" signature="244:530" ph="SELECT BAT_I... MAS_BATCH" />
+            <marker date="1529706100808" expanded="true" signature="1090:1275" ph="UPDATE MAS_BATCH... " />
+            <marker date="1529706100808" expanded="true" signature="1329:1773" ph="INSERT INTO MAS_BATCH... " />
+            <marker date="1529706100808" expanded="true" signature="1831:1881" ph="DELETE FROM MAS_BATCH... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/beverageMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="34" column="31" lean-forward="false" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+          <folding>
+            <marker date="1529706100771" expanded="true" signature="250:441" ph="SELECT BEV_I... MAS_BEVERAGE" />
+            <marker date="1529706100771" expanded="true" signature="1029:1349" ph="INSERT INTO MAS_BEVERAGE... " />
+            <marker date="1529706100771" expanded="true" signature="1410:1463" ph="DELETE FROM MAS_BEVERAGE... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/view/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" column="114" lean-forward="false" selection-start-line="29" selection-start-column="114" selection-end-line="29" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/ingredientMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="46" column="29" lean-forward="false" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
+          <folding>
+            <marker date="1529707707054" expanded="true" signature="254:458" ph="SELECT ING_I... MAS_INGREDIENT" />
+            <marker date="1529707707054" expanded="true" signature="1066:1243" ph="UPDATE MAS_INGREDIENT... " />
+            <marker date="1529707707054" expanded="true" signature="1302:1637" ph="INSERT INTO MAS_INGREDIENT... " />
+            <marker date="1529707707054" expanded="true" signature="1700:1755" ph="DELETE FROM MAS_INGREDIENT... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mas/service/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="33" column="21" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mas/service/ReportService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mas/model/business/Recipe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mas/model/business/ExtendedBusinessObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="48" column="5" lean-forward="false" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/BusinessObject.jar!/associations/BusinessObject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="99" column="28" lean-forward="false" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mas/controller/ReportFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#326#327#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mas/service/HelloWorldService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mas/request/HelloWorldRequest.java">
+    <entry file="das://table:/e8f717e5/aaba46a6-7273-4c04-894e-2c19b7b24b98/MAS.MAS_EMP_ROL">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/authMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        <state relative-caret-position="264">
+          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding>
+            <marker date="1529849654547" expanded="true" signature="242:356" ph="SELECT AUT_E... MAS_EMP_AUTH" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mas/controller/LogoutController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mas/response/HelloWorldResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mas/model/HelloWorldModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mas/controller/HelloWorldController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="21" column="68" lean-forward="true" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#691#692#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.20/lombok-1.16.20.jar!/lombok/AllArgsConstructor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MAS.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mas/model/HelloWorldModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mas/service/HelloWorldService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mas/service/impl/HelloWorldServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#291#292#0" expanded="true" />
-            <element signature="e#328#329#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mas/controller/ErrorController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        <state relative-caret-position="88">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mas/controller/ReportCreateController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        <state relative-caret-position="308">
+          <caret line="29" column="86" lean-forward="false" selection-start-line="29" selection-start-column="86" selection-end-line="29" selection-end-column="86" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mas/main/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mas/model/business/Template.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        <state relative-caret-position="286">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mas/model/business/Report.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="674">
+          <caret line="69" column="44" lean-forward="true" selection-start-line="69" selection-start-column="44" selection-end-line="70" selection-end-column="78" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#326#327#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#2670#2671#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mas/response/HelloWorldResponse.java">
+    <entry file="file://$PROJECT_DIR$/frontend/navbar/navbar.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="703">
+          <caret line="45" column="15" lean-forward="false" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mas/service/AuthService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/view/dashboard.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/form/report.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="48" lean-forward="false" selection-start-line="4" selection-start-column="48" selection-end-line="5" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mas/model/business/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mas/model/business/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1452">
+          <caret line="83" column="115" lean-forward="false" selection-start-line="83" selection-start-column="115" selection-end-line="83" selection-end-column="115" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mas/controller/OrderViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="12" column="46" lean-forward="false" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/data/header/report.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mas/controller/BeverageViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" column="54" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/subscriptionMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <marker date="1529702557716" expanded="true" signature="258:533" ph="SELECT SUB_I... MAS_SUBSCRIPTION" />
+            <marker date="1529702557716" expanded="true" signature="1161:1343" ph="UPDATE MAS_SUBSCRIPTION... " />
+            <marker date="1529702557716" expanded="true" signature="1404:1844" ph="INSERT INTO MAS_SUBSCRIPTION... " />
+            <marker date="1529702557716" expanded="true" signature="1909:1966" ph="DELETE FROM MAS_SUBSCRIPTION... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mas/controller/AuthenticationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="28" column="66" lean-forward="false" selection-start-line="28" selection-start-column="66" selection-end-line="28" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mas/controller/DashboardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mas/mapper/BeverageMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mas/request/HelloWorldRequest.java">
+    <entry file="file://$PROJECT_DIR$/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="198">
+          <caret line="72" column="29" lean-forward="false" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mas/controller/HelloWorldController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mas/model/business/Beverage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#691#692#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="352">
+          <caret line="70" column="17" lean-forward="false" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/data/beverage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="52" column="11" lean-forward="false" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/data/report.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-682">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/data/header/beverage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/data/header/order.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/data/order.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="54" column="17" lean-forward="false" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/style/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -737,10 +1455,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>MAS</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -760,6 +1480,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>bootstrap</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -771,7 +1492,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>9.0</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -783,7 +1504,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>MAS_0</last-edited>
+          <last-edited>MAS</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -796,6 +1517,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>BusinessObject</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

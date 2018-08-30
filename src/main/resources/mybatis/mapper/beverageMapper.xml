@@ -42,10 +42,10 @@
         )
         VALUES (
             MAS_BEVERAGE_SEQ.nextval,
-            #{beverage.templateId},
-            #{beverage.orderId},
-            #{beverage.createDate},
-            #{beverage.batchId}
+            #{templateId},
+            #{orderId},
+            #{createDate},
+            #{batchId}
         )
     </insert>
 

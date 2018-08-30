@@ -34,10 +34,10 @@
 
     <update id="updateIngredient">
         UPDATE MAS_INGREDIENT
-        SET ING_NAME = #{ingredient.name},
-            ING_PRICE_PER_KG = #{ingredient.pricePerKilo},
-            ING_YIELD_PER_KG = #{ingredient.yieldPerKilo}
-        WHERE ING_ID = #{ingredient.id}
+        SET ING_NAME = #{name},
+            ING_PRICE_PER_KG = #{pricePerKilo},
+            ING_YIELD_PER_KG = #{yieldPerKilo}
+        WHERE ING_ID = #{id}
     </update>
 
     <insert id="insertIngredient">
@@ -50,10 +50,10 @@
         )
         VALUES (
             MAS_INGREDIENT_SEQ.nextval,
-            #{ingredient.name},
-            #{ingredient.pricePerKilo},
-            #{ingredient.yieldPerKilo},
-            #{ingredient.supplierId}
+            #{name},
+            #{pricePerKilo},
+            #{yieldPerKilo},
+            #{supplierId}
         )
     </insert>
 

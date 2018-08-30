@@ -12,6 +12,7 @@ import mas.model.constants.AssociationNames;
 import mas.model.dto.AbstractDTO;
 import mas.model.dto.IngredientVolumeDTO;
 import mas.model.dto.ReportDTO;
+import org.apache.commons.lang3.time.DateFormatUtils;
 
 import java.util.Date;
 
@@ -64,5 +65,9 @@ public class Report extends ExtendedBusinessObject {
                 throw new BusinessException(e);
             }
         }
+    }
+
+    public String getCreateDateFormatted() {
+        return DateFormatUtils.format(getCreateDate(), "yyyy-MM-dd HH:mm:ss");
     }
 }

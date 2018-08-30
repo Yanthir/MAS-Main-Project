@@ -11,7 +11,7 @@ import java.util.List;
 public class BeverageMapper extends AbstractMapper {
 
     public static BeverageDTO selectBeverageById(@Param("id") String id) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             return session.selectOne("selectBeverageById", id);
         } finally {
             closeAllConnections();
@@ -19,7 +19,7 @@ public class BeverageMapper extends AbstractMapper {
     }
 
     public static List<BeverageDTO> selectBeveragesByIds(@Param("id") List<String> ids) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             return session.selectList("selectBeveragesByIds", ids);
         } finally {
             closeAllConnections();
@@ -27,7 +27,7 @@ public class BeverageMapper extends AbstractMapper {
     }
 
     public static List<BeverageDTO> selectAllBeverages() {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             return session.selectList("selectAllBeverages");
         } finally {
             closeAllConnections();
@@ -35,7 +35,7 @@ public class BeverageMapper extends AbstractMapper {
     }
 
     public static void insertBeverage(@Param("beverage") BeverageDTO beverage) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.insert("insertBeverage", beverage);
         } finally {
             closeAllConnections();
@@ -43,14 +43,14 @@ public class BeverageMapper extends AbstractMapper {
     }
 
     public static void deleteBeverageById(@Param("id") String id) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.delete("deleteBeverageById", id);
         } finally {
             closeAllConnections();
         }
     }
     public static void deleteBeveragesByIds(@Param("ids") List<String> ids) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.delete("deleteBeveragesByIds", ids);
         } finally {
             closeAllConnections();

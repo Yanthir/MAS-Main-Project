@@ -8,8 +8,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+<style>
+    .linkRow:hover {
+        background-color: lavenderblush;
+        cursor: pointer;
+    }
+</style>
+
 <body style="background-color: lavender">
-    <div class="container h-100 bg-white">
+    <div class="container bg-white" style="min-height: 100% !important;">
         <div class="row bg-light border-bottom">
             <div class="col-12 mx-3 mb-5 pt-5">
                 <h1>Rozlewnia soków</h1>
@@ -30,6 +37,10 @@
                     <jsp:include page="form/report.jsp"/>
                 <%} else if("reportView".equals(pageName)) {%>
                     <jsp:include page="data/report.jsp"/>
+                <%} else if("orderView".equals(pageName)) {%>
+                    <jsp:include page="data/order.jsp"/>
+                <%} else if("beverageView".equals(pageName)) {%>
+                    <jsp:include page="data/beverage.jsp"/>
                 <%} else {%>
                     <jsp:include page="view/error.jsp"/>
                 <% } %>

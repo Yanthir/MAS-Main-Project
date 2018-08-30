@@ -59,6 +59,16 @@
         <servlet-class>mas.controller.ErrorController</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>OrderViewController</servlet-name>
+        <servlet-class>mas.controller.OrderViewController</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>BeverageViewController</servlet-name>
+        <servlet-class>mas.controller.BeverageViewController</servlet-class>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>/</url-pattern>
@@ -92,6 +102,16 @@
     <servlet-mapping>
         <servlet-name>ReportViewController</servlet-name>
         <url-pattern>/report/view</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>OrderViewController</servlet-name>
+        <url-pattern>/order/view</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>BeverageViewController</servlet-name>
+        <url-pattern>/beverage/view</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>

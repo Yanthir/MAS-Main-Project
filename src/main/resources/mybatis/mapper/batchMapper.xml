@@ -36,10 +36,10 @@
 
     <update id="updateBatch">
         UPDATE MAS_BATCH
-            SET BAT_STA_ID = #{batch.statusId},
-                BAT_VOLUME = #{batch.volume},
-                BAT_AVAILABLE_VOLUME = #{batch.availableVolume}
-        WHERE BAT_ID = #{batch.id}
+            SET BAT_STA_ID = #{statusId},
+                BAT_VOLUME = #{volume},
+                BAT_AVAILABLE_VOLUME = #{availableVolume}
+        WHERE BAT_ID = #{id}
     </update>
 
     <insert id="insertBatch">
@@ -54,12 +54,12 @@
         )
         VALUES (
             MAS_BATCH_SEQ.nextval,
-            #{batch.createDate},
-            #{batch.statusId},
-            #{batch.expirationDate},
-            #{batch.volume},
-            #{batch.availableVolume},
-            #{batch.recipeId}
+            #{createDate},
+            #{statusId},
+            #{expirationDate},
+            #{volume},
+            #{availableVolume},
+            #{recipeId}
         )
     </insert>
 

@@ -12,7 +12,7 @@ public class SubscriptionMapper extends AbstractMapper {
     private static SqlSessionFactory sqlSessionFactory = MyBatisSqlSessionManager.getFactory();
 
     public static SubscriptionDTO selectSubscriptionById(@Param("id") String id) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             return session.selectOne("selectSubscriptionById", id);
         } finally {
             closeAllConnections();
@@ -20,7 +20,7 @@ public class SubscriptionMapper extends AbstractMapper {
     }
 
     public static List<SubscriptionDTO> selectSubscriptionsByIds(@Param("id") List<String> ids) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             return session.selectList("selectSubscriptionsByIds", ids);
         } finally {
             closeAllConnections();
@@ -28,7 +28,7 @@ public class SubscriptionMapper extends AbstractMapper {
     }
 
     public static List<SubscriptionDTO> selectAllSubscriptions() {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             return session.selectList("selectAllSubscriptions");
         } finally {
             closeAllConnections();
@@ -36,7 +36,7 @@ public class SubscriptionMapper extends AbstractMapper {
     }
 
     public static void updateSubscription(@Param("subscription") SubscriptionDTO subscription) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.update("updateSubscription", subscription);
         } finally {
             closeAllConnections();
@@ -44,7 +44,7 @@ public class SubscriptionMapper extends AbstractMapper {
     }
 
     public static void insertSubscription(@Param("subscription") SubscriptionDTO subscription) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.insert("insertSubscription", subscription);
         } finally {
             closeAllConnections();
@@ -52,14 +52,14 @@ public class SubscriptionMapper extends AbstractMapper {
     }
 
     public static void deleteSubscriptionById(@Param("id") String id) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.delete("deleteSubscriptionById", id);
         } finally {
             closeAllConnections();
         }
     }
     public static void deleteSubscriptionsByIds(@Param("ids") List<String> ids) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.delete("deleteSubscriptionsByIds", ids);
         } finally {
             closeAllConnections();

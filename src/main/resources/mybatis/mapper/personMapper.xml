@@ -33,18 +33,18 @@
 
     <update id="updatePerson">
         UPDATE MAS_PERSON
-        SET PER_NAME = #{person.name},
-            PER_SURNAME = #{person.surname},
-            PER_ADDRESS = #{person.address}
-        WHERE PER_ID = #{person.id}
+        SET PER_NAME = #{name},
+            PER_SURNAME = #{surname},
+            PER_ADDRESS = #{address}
+        WHERE PER_ID = #{id}
     </update>
 
     <insert id="insertPerson">
         INSERT INTO MAS_PERSON (PER_SURNAME, PER_NAME, PER_ADDRESS)
         VALUES (
-            #{person.surname},
-            #{person.name},
-            #{person.address}
+            #{surname},
+            #{name},
+            #{address}
         )
     </insert>
 

@@ -33,10 +33,10 @@
 
     <update id="updateRecipe">
         UPDATE MAS_RECIPE
-        SET REC_NAME = #{recipe.name},
-            REC_DESCRIPTION = #{recipe.description},
-            REC_PRICE = #{recipe.price}
-        WHERE REC_ID = #{recipe.id}
+        SET REC_NAME = #{name},
+            REC_DESCRIPTION = #{description},
+            REC_PRICE = #{price}
+        WHERE REC_ID = #{id}
     </update>
 
     <insert id="insertRecipe">
@@ -48,9 +48,9 @@
         )
         VALUES (
             MAS_RECIPE_SEQ.nextval,
-            #{recipe.name},
-            #{recipe.description},
-            #{recipe.price}
+            #{name},
+            #{description},
+            #{price}
         )
     </insert>
 

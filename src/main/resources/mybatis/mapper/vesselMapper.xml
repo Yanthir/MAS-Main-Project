@@ -35,11 +35,11 @@
 
     <update id="updateVessel">
         UPDATE MAS_VESSEL
-        SET VES_NAME = #{vessel.name},
-            VES_VOLUME = #{vessel.volume},
-            VES_PRICE = #{vessel.price},
-            VES_STOCK = #{vessel.stock}
-        WHERE VES_ID = #{vessel.id}
+        SET VES_NAME = #{name},
+            VES_VOLUME = #{volume},
+            VES_PRICE = #{price},
+            VES_STOCK = #{stock}
+        WHERE VES_ID = #{id}
     </update>
 
     <insert id="insertVessel">
@@ -53,11 +53,11 @@
         )
         VALUES (
             MAS_VESSEL_SEQ.nextval,
-            #{vessel.name},
-            #{vessel.columen},
-            #{vessel.price},
-            #{vessel.stock},
-            #{vessel.supplierId}
+            #{name},
+            #{columen},
+            #{price},
+            #{stock},
+            #{supplierId}
         )
     </insert>
 

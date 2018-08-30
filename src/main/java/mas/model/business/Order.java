@@ -11,9 +11,13 @@ import mas.exception.BusinessException;
 import mas.model.constants.AssociationNames;
 import mas.model.dto.AbstractDTO;
 import mas.model.dto.OrderDTO;
+import org.apache.commons.lang3.time.DateFormatUtils;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
@@ -57,7 +61,9 @@ public class Order extends ExtendedBusinessObject {
         BigDecimal price = BigDecimal.ZERO;
 
         try {
-            Beverage[] beverages = (Beverage[]) getLinkedObjects(AssociationNames.ASSOC_ORDER_BEVERAGES);
+            List<Beverage> beverages = Arrays.stream(getLinkedObjects(AssociationNames.ASSOC_ORDER_BEVERAGES))
+                    .map(Beverage.class::cast)
+                    .collect(Collectors.toList());
             for (Beverage beverage : beverages) {
                 Template template = (Template) beverage.getLinkedObjects(AssociationNames.ASSOC_BEVERAGE_TEMPLATE)[0];
                 BigDecimal beveragePrice = template.getPrice();
@@ -68,5 +74,13 @@ public class Order extends ExtendedBusinessObject {
         }
 
         return price;
+    }
+
+    public String getSubmissionDateFormatted() {
+        return DateFormatUtils.format(getSubmissionDate(), "yyyy-MM-dd HH:mm:ss");
+    }
+
+    public String getDeliveryDateFormatted() {
+        return getDeliveryDate() != null ? DateFormatUtils.format(getSubmissionDate(), "yyyy-MM-dd HH:mm:ss") : "--";
     }
 }

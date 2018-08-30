@@ -33,10 +33,10 @@
 
     <update id="updateSupplier">
         UPDATE MAS_SUPPLIER
-        SET SUP_COMPANY_NAME = #{supplier.name},
-            SUP_ADDRESS = #{supplier.address},
-            SUP_PHONE_NUMBER = #{supplier.phoneNumber}
-        WHERE SUP_ID = #{supplier.id}
+        SET SUP_COMPANY_NAME = #{name},
+            SUP_ADDRESS = #{address},
+            SUP_PHONE_NUMBER = #{phoneNumber}
+        WHERE SUP_ID = #{id}
     </update>
 
     <insert id="insertSupplier">
@@ -48,9 +48,9 @@
         )
         VALUES (
             MAS_SUPPLIER_SEQ.nextval,
-            #{supplier.name},
-            #{supplier.address},
-            #{supplier.phoneNumber}
+            #{name},
+            #{address},
+            #{phoneNumber}
         )
     </insert>
 

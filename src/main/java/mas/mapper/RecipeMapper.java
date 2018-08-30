@@ -12,7 +12,7 @@ public class RecipeMapper extends AbstractMapper {
     private static SqlSessionFactory sqlSessionFactory = MyBatisSqlSessionManager.getFactory();
 
     public static RecipeDTO selectRecipeById(@Param("id") String id) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             return session.selectOne("selectRecipeById", id);
         } finally {
             closeAllConnections();
@@ -20,7 +20,7 @@ public class RecipeMapper extends AbstractMapper {
     }
 
     public static List<RecipeDTO> selectRecipesByIds(@Param("id") List<String> ids) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             return session.selectList("selectRecipesByIds", ids);
         } finally {
             closeAllConnections();
@@ -28,7 +28,7 @@ public class RecipeMapper extends AbstractMapper {
     }
 
     public static List<RecipeDTO> selectAllRecipes() {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             return session.selectList("selectAllRecipes");
         } finally {
             closeAllConnections();
@@ -36,7 +36,7 @@ public class RecipeMapper extends AbstractMapper {
     }
 
     public static void updateRecipe(@Param("recipe") RecipeDTO recipe) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.update("updateRecipe", recipe);
         } finally {
             closeAllConnections();
@@ -44,7 +44,7 @@ public class RecipeMapper extends AbstractMapper {
     }
 
     public static void insertRecipe(@Param("recipe") RecipeDTO recipe) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.insert("insertRecipe", recipe);
         } finally {
             closeAllConnections();
@@ -52,14 +52,14 @@ public class RecipeMapper extends AbstractMapper {
     }
 
     public static void deleteRecipeById(@Param("id") String id) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.delete("deleteRecipeById", id);
         } finally {
             closeAllConnections();
         }
     }
     public static void deleteRecipesByIds(@Param("ids") List<String> ids) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.delete("deleteRecipesByIds", ids);
         } finally {
             closeAllConnections();

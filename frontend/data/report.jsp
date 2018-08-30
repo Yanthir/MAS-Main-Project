@@ -5,17 +5,21 @@
 <%@ page import="mas.model.business.Report" %>
 <%@ page import="mas.model.constants.AssociationNames" %>
 <%@ page import="java.util.Arrays" %>
+<%@ page import="java.util.Comparator" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.stream.Collectors" %>
+<%@page pageEncoding="utf-8" %>
 
 <%
-    if(session.getAttribute("userId") == null) {
+    if(session.getAttribute("employeeId") == null) {
         request.getRequestDispatcher("/error").forward(request, response);
         return;
     }
     List<Report> reports;
+    String header;
     if(request.getAttribute("all") == null) {
-        Employee employee = (Employee) Employee.getById(Employee.class, (String) request.getSession().getAttribute("userId"));
+        header = "Moje raporty";
+        Employee employee = (Employee) Employee.getById(Employee.class, (String) request.getSession().getAttribute("employeeId"));
         try {
             reports = Arrays.stream(employee.getLinkedObjects(AssociationNames.ASSOC_CONTROLLER_REPORTS))
                     .map(Report.class::cast)
@@ -24,11 +28,17 @@
             throw new BusinessException(e);
         }
     } else {
+        header = "Wszystkie raporty";
         reports =  Arrays.stream(Report.getAll(Report.class))
                 .map(Report.class::cast)
                 .collect(Collectors.toList());
     }
+    reports.sort(Comparator.comparing(Report::getCreateDate).reversed());
 %>
+
+<div class="py-3 text-center">
+    <h2><%=header%></h2>
+</div>
 
 <table class="table">
     <jsp:include page="header/report.jsp"/>
@@ -49,13 +59,17 @@
                 <%=report.getId()%>
             </td>
             <td>
-                <%=report.getCreateDate()%>
+                <%=report.getCreateDateFormatted()%>
             </td>
             <td>
                 <%=batch.getId()%>
             </td>
             <td>
-                <%=report.getDescription()%>
+                <div style="
+                    max-height:300px;
+                    overflow-y:auto;">
+                        <%=report.getDescription()%>
+                </div>
             </td>
             <td>
                 <%=batch.getStatus().toString()%>

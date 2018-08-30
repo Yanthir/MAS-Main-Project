@@ -33,10 +33,10 @@
 
     <update id="updateSet">
         UPDATE MAS_SET
-        SET SET_DESCRIPTION = #{set.description},
-            SET_PRICE = #{set.price},
-            SET_NAME = #{set.name}
-        WHERE SET_ID = #{set.id}
+        SET SET_DESCRIPTION = #{description},
+            SET_PRICE = #{price},
+            SET_NAME = #{name}
+        WHERE SET_ID = #{id}
     </update>
 
     <insert id="insertSet">
@@ -48,9 +48,9 @@
         )
         VALUES (
             MAS_SET_SEQ.nextval,
-            #{set.description},
-            #{set.price},
-            #{set.name}
+            #{description},
+            #{price},
+            #{name}
         )
     </insert>
 

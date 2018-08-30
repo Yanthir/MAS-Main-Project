@@ -12,7 +12,7 @@ public class TemplateMapper extends AbstractMapper {
     private static SqlSessionFactory sqlSessionFactory = MyBatisSqlSessionManager.getFactory();
 
     public static TemplateDTO selectTemplateById(@Param("id") String id) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             return session.selectOne("selectTemplateById", id);
         } finally {
             closeAllConnections();
@@ -20,7 +20,7 @@ public class TemplateMapper extends AbstractMapper {
     }
 
     public static List<TemplateDTO> selectTemplatesByIds(@Param("id") List<String> ids) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             return session.selectList("selectTemplatesByIds", ids);
         } finally {
             closeAllConnections();
@@ -28,7 +28,7 @@ public class TemplateMapper extends AbstractMapper {
     }
 
     public static List<TemplateDTO> selectAllTemplates() {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             return session.selectList("selectAllTemplates");
         } finally {
             closeAllConnections();
@@ -36,7 +36,7 @@ public class TemplateMapper extends AbstractMapper {
     }
 
     public static void updateTemplate(@Param("template") TemplateDTO template) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.update("updateTemplate", template);
         } finally {
             closeAllConnections();
@@ -44,7 +44,7 @@ public class TemplateMapper extends AbstractMapper {
     }
 
     public static void insertTemplate(@Param("template") TemplateDTO template) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.insert("insertTemplate", template);
         } finally {
             closeAllConnections();
@@ -52,14 +52,14 @@ public class TemplateMapper extends AbstractMapper {
     }
 
     public static void deleteTemplateById(@Param("id") String id) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.delete("deleteTemplateById", id);
         } finally {
             closeAllConnections();
         }
     }
     public static void deleteTemplatesByIds(@Param("ids") List<String> ids) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.delete("deleteTemplatesByIds", ids);
         } finally {
             closeAllConnections();

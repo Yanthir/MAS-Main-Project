@@ -33,8 +33,8 @@
 
     <update id="updateTemplateQuantity">
         UPDATE MAS_TEM_IN_SET
-        SET TIS_QUANTITY = #{templateQuantity.quatity}
-        WHERE TIS_ID = #{templateQuantity.id}
+        SET TIS_QUANTITY = #{quatity}
+        WHERE TIS_ID = #{id}
     </update>
 
     <insert id="insertTemplateQuantity">
@@ -46,9 +46,9 @@
         )
         VALUES (
             MAS_TEM_IN_SET_SEQ.nextval,
-            #{templateQuantity.templateId},
-            #{templateQuantity.setId},
-            #{templateQuantity.quantity}
+            #{templateId},
+            #{setId},
+            #{quantity}
         )
     </insert>
 

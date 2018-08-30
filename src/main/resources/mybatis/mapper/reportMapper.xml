@@ -34,8 +34,8 @@
 
     <update id="updateReport">
         UPDATE MAS_REPORT
-        SET REP_DESCRIPTION = #{report.description}
-        WHERE REP_ID = #{report.id}
+        SET REP_DESCRIPTION = #{description}
+        WHERE REP_ID = #{id}
     </update>
 
     <insert id="insertReport">
@@ -48,10 +48,10 @@
         )
         VALUES (
             MAS_REPORT_SEQ.nextval,
-            #{report.employeeId},
-            #{report.batchId},
-            #{report.description},
-            #{report.createDate}
+            #{employeeId},
+            #{batchId},
+            #{description},
+            #{createDate}
         )
     </insert>
 

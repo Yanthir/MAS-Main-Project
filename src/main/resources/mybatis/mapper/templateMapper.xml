@@ -34,9 +34,9 @@
 
     <update id="updateTemplate">
         UPDATE MAS_TEMPLATE
-        SET TEM_NAME = #{template.name},
-            TEM_PRICE = #{template.price}
-        WHERE TEM_ID = #{template.id}
+        SET TEM_NAME = #{name},
+            TEM_PRICE = #{price}
+        WHERE TEM_ID = #{id}
     </update>
 
     <insert id="insertTemplate">
@@ -49,10 +49,10 @@
         )
         VALUES (
             MAS_TEMPLATE_SEQ.nextval,
-            #{template.name},
-            #{template.price},
-            #{template.vesselId},
-            #{template.recipeId}
+            #{name},
+            #{price},
+            #{vesselId},
+            #{recipeId}
         )
     </insert>
 

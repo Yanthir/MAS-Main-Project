@@ -12,6 +12,9 @@ import mas.model.dto.ReportDTO;
 import mas.model.dto.SetDTO;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
@@ -35,7 +38,9 @@ public class Set extends ExtendedBusinessObject {
     }
 
     public void setPrice(BigDecimal price) throws AssociationException {
-        TemplateQuantity[] templateQuantities = (TemplateQuantity[]) getLinkedObjects(AssociationNames.ASSOC_SET_TEMPLATE_QUANTITIES);
+        List<TemplateQuantity> templateQuantities = Arrays.stream(getLinkedObjects(AssociationNames.ASSOC_SET_TEMPLATE_QUANTITIES))
+                .map(TemplateQuantity.class::cast)
+                .collect(Collectors.toList());
         BigDecimal productionPrice = BigDecimal.ZERO;
 
         for(TemplateQuantity templateQuantity : templateQuantities) {

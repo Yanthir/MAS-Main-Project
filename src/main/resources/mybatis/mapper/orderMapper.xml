@@ -34,9 +34,9 @@
 
     <update id="updateOrder">
         UPDATE MAS_ORDER
-        SET ORD_DELIVERY_DATE = #{order.deliveryDate},
-            ORD_PRICE = #{order.price}
-        WHERE ORD_ID = #{order.id}
+        SET ORD_DELIVERY_DATE = #{deliveryDate},
+            ORD_PRICE = #{price}
+        WHERE ORD_ID = #{id}
     </update>
 
     <insert id="insertOrder">
@@ -49,10 +49,10 @@
         )
         VALUES (
             MAS_ORDER_SEQ.nextval,
-            #{order.clientId},
-            #{order.createDate},
-            #{order.deliveryDate},
-            #{order.price}
+            #{clientId},
+            #{createDate},
+            #{deliveryDate},
+            #{price}
         )
     </insert>
 

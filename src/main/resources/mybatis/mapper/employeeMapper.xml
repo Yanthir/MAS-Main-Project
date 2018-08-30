@@ -53,14 +53,14 @@
 
     <update id="updateEmployee">
         UPDATE MAS_PERSON
-        SET PER_NAME = #{employee.name},
-            PER_SURNAME = #{employee.surname},
-            PER_ADDRESS = #{employee.address}
-        WHERE PER_ID = #{employee.id};
+        SET PER_NAME = #{name},
+            PER_SURNAME = #{surname},
+            PER_ADDRESS = #{address}
+        WHERE PER_ID = #{id};
         UPDATE MAS_EMPLOYEE
-        SET EMP_ACCOUNT_NUMBER = #{employee.bankAccountNumber},
-            EMP_PHONE_NUMBER = #{employee.phoneNumber}
-        WHERE EMP_PER_ID = #{employee.id}
+        SET EMP_ACCOUNT_NUMBER = #{bankAccountNumber},
+            EMP_PHONE_NUMBER = #{phoneNumber}
+        WHERE EMP_PER_ID = #{id}
     </update>
 
     <insert id="insertEmployee">
@@ -72,9 +72,9 @@
         )
         VALUES (
             MAS_PERSON_SEQ.nextval,
-            #{client.surname},
-            #{client.name},
-            #{client.address}
+            #{surname},
+            #{name},
+            #{address}
         );
         INSERT INTO MAS_EMPLOYEE (
             EMP_PER_ID,
@@ -83,10 +83,10 @@
             EMP_VALID_FROM
         )
         VALUES (
-            MAS_PERSON_SEQ.nextval,
-            #{employee.bankAccountNumber},
-            #{employee.phoneNumber},
-            #{employee.employmentDate}
+            MAS_PERSON_SEQ.currval,
+            #{bankAccountNumber},
+            #{phoneNumber},
+            #{employmentDate}
         )
     </insert>
 

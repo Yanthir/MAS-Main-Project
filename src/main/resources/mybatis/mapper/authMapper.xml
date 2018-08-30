@@ -7,10 +7,10 @@
 
     <sql id="selectAuth">
         SELECT
-            AUT_EMP_ID id,
+            AUT_PER_ID id,
             AUT_LOGIN login,
             AUT_HASH hash
-        FROM MAS_EMP_AUTH
+        FROM MAS_PER_AUTH
     </sql>
 
     <select id="selectAuthByLogin" resultType="AuthDTO">

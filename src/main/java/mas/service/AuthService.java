@@ -1,6 +1,8 @@
 package mas.service;
 
 import mas.mapper.AuthMapper;
+import mas.model.business.Client;
+import mas.model.business.Employee;
 import mas.model.dto.AuthDTO;
 
 import java.nio.charset.StandardCharsets;
@@ -19,6 +21,20 @@ public class AuthService {
         }
     }
 
+    public static String getClientIdForAuth(String login, String password) {
+        if(login == null || password == null) {
+            return null;
+        }
+        AuthDTO authDTO = AuthMapper.selectAuthByLogin(login);
+        if(authDTO == null || !digestHash(password).equals(authDTO.getHash())) {
+            return null;
+        }
+        if(Client.getById(Client.class, authDTO.getId()) != null) {
+            return authDTO.getId();
+        }
+        return null;
+    }
+
     public static String getEmployeeIdForAuth(String login, String password) {
         if(login == null || password == null) {
             return null;
@@ -27,7 +43,10 @@ public class AuthService {
         if(authDTO == null || !digestHash(password).equals(authDTO.getHash())) {
             return null;
         }
-        return authDTO.getId();
+        if(Employee.getById(Employee.class, authDTO.getId()) != null) {
+            return authDTO.getId();
+        }
+        return null;
     }
 
     private static String digestHash(String plaintext) {

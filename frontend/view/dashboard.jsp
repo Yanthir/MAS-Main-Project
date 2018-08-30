@@ -1,15 +1,28 @@
 <%@ page import="mas.model.business.Employee" %>
+<%@ page import="mas.model.business.Person" %>
+<%@ page import="mas.model.business.Client" %>
 <%@page pageEncoding="utf-8" %>
 
 <%
-    if(session.getAttribute("userId") == null) {
+    if(session.getAttribute("employeeId") == null && session.getAttribute("clientId") == null) {
         request.getRequestDispatcher("/error").forward(request, response);
         return;
     }
 
-    String fullName;
-    Employee employee = (Employee) Employee.getById(Employee.class, (String) request.getSession().getAttribute("userId"));
-    fullName = employee.getName() + " " + employee.getSurname();
+    String personId = (String) request.getSession().getAttribute("employeeId");
+    if (personId == null) {
+        personId = (String) request.getSession().getAttribute("clientId");
+    }
+
+    String fullName = "ty";
+    Employee employee = (Employee) Employee.getById(Employee.class, personId);
+    if(employee != null) {
+        fullName = employee.getName() + " " + employee.getSurname();
+    }
+    Client client = (Client) Client.getById(Client.class, personId);
+    if(client != null) {
+        fullName = client.getName() + " " + client.getSurname();
+    }
 
     String message = null;
     if(request.getAttribute("message") != null) {

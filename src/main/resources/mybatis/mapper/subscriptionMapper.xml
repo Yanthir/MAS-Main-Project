@@ -36,10 +36,10 @@
 
     <update id="updateSubscription">
         UPDATE MAS_SUBSCRIPTION
-        SET SUB_CYCLE_LENGTH = #{subscription.cycleLength},
-            SUB_CYCLE_COUNT = #{subscription.cycleCount},
-            SUB_END_DATE = #{subscription.endDate}
-        WHERE SUB_ID = #{subscription.id}
+        SET SUB_CYCLE_LENGTH = #{cycleLength},
+            SUB_CYCLE_COUNT = #{cycleCount},
+            SUB_END_DATE = #{endDate}
+        WHERE SUB_ID = #{id}
     </update>
 
     <insert id="insertSubscription">
@@ -54,12 +54,12 @@
         )
         VALUES (
             MAS_SUBSCRIPTION_SEQ.nextval,
-            #{subscription.setId},
-            #{subscription.clientId},
-            #{subscription.cycleLength},
-            #{subscription.cycleCount},
-            #{subscription.startDate},
-            #{subscription.endDate}
+            #{setId},
+            #{clientId},
+            #{cycleLength},
+            #{cycleCount},
+            #{startDate},
+            #{endDate}
         )
     </insert>
 

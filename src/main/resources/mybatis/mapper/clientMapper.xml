@@ -35,13 +35,13 @@
 
     <update id="updateClient">
         UPDATE MAS_PERSON
-        SET PER_NAME = #{client.name},
-            PER_SURNAME = #{client.surname},
-            PER_ADDRESS = #{client.address}
-        WHERE PER_ID = #{client.id};
+        SET PER_NAME = #{name},
+            PER_SURNAME = #{surname},
+            PER_ADDRESS = #{address}
+        WHERE PER_ID = #{id};
         UPDATE MAS_CLIENT
-        SET CLI_EMAIL = #{client.emailAddress}
-        WHERE CLI_PER_ID = #{client.id}
+        SET CLI_EMAIL = #{emailAddress}
+        WHERE CLI_PER_ID = #{id}
     </update>
 
     <insert id="insertClient">
@@ -53,9 +53,9 @@
         )
         VALUES (
             MAS_PERSON_SEQ.nextval,
-            #{client.surname},
-            #{client.name},
-            #{client.address}
+            #{surname},
+            #{name},
+            #{address}
         );
         INSERT INTO MAS_CLIENT (
             CLI_PER_ID,
@@ -63,7 +63,7 @@
         )
         VALUES (
             MAS_PERSON_SEQ.currval,
-            #{client.emailAddress}
+            #{emailAddress}
         )
     </insert>
 

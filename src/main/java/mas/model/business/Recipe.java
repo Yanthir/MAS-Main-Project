@@ -10,6 +10,9 @@ import mas.model.dto.AbstractDTO;
 import mas.model.dto.RecipeDTO;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
@@ -34,7 +37,9 @@ public class Recipe extends ExtendedBusinessObject {
     public BigDecimal getProductionPrice() {
         BigDecimal productionPrice = BigDecimal.ZERO;
         try {
-            IngredientVolume[] volumes = (IngredientVolume[]) getLinkedObjects(AssociationNames.ASSOC_RECIPE_INGREDIENT_VOLUMES);
+            List<IngredientVolume> volumes = Arrays.stream(getLinkedObjects(AssociationNames.ASSOC_RECIPE_INGREDIENT_VOLUMES))
+                    .map(IngredientVolume.class::cast)
+                    .collect(Collectors.toList());
             for (IngredientVolume volume : volumes) {
                 Ingredient ingredient = (Ingredient) volume.getLinkedObjects(AssociationNames.ASSOC_INGREDIENT_VOLUME_INGREDIENT)[0];
                 BigDecimal ingredientPrice = volume.getVolume()

@@ -27,7 +27,7 @@
                 <%=logoutMessage%>
             </div>
         <% } %>
-        <form class="needs-validation" action="<%=context%>/login" method="post" novalidate>
+        <form class="needs-validation" action="<%=context%>/login" method="post" novalidate accept-charset="UTF-8">
             <div class="form-row">
                 <div class="col-3"></div>
                 <div class="col-6 mb-3">

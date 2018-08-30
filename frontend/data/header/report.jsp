@@ -1,3 +1,4 @@
+<%@page pageEncoding="utf-8" %>
 <tr>
     <th scope="col">#</th>
     <th scope="col">Id</th>

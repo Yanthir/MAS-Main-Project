@@ -9,7 +9,7 @@ import java.util.List;
 
 public class AuthMapper extends AbstractMapper {
     public static AuthDTO selectAuthByLogin(@Param("login") String login) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             return session.selectOne("selectAuthByLogin", login);
         } finally {
             closeAllConnections();

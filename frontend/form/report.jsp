@@ -9,7 +9,7 @@
     String context = request.getContextPath();
     List<Batch> batches = Arrays.stream(Batch.getAll(Batch.class))
             .map(batch -> (Batch) batch)
-            .filter(batch -> !batch.getStatus().equals(Status.PENDING))
+            .filter(batch -> batch.getStatus().equals(Status.PENDING))
             .collect(Collectors.toList());
 %>
 
@@ -19,7 +19,7 @@
         <div class="py-3 text-center">
             <h2>Utwórz raport</h2>
         </div>
-        <form class="needs-validation" action="<%=context%>/report/create" method="post" novalidate>
+        <form class="needs-validation" action="<%=context%>/report/create" method="post" novalidate accept-charset="UTF-8">
             <div class="form-row">
                 <div class="col-12 mb-3">
                     <label for="batchId">Numer partii</label>
@@ -47,8 +47,8 @@
             </div>
             <div class="form-row">
                 <div class="col-12 mb-3">
-                    <label class="radio-inline"><input class="mx-2" type="radio" checked="checked" name="status">Akceptuj</label>
-                    <label class="radio-inline"><input class="mx-2" type="radio" name="status">Odrzuć</label>
+                    <label class="radio-inline"><input value="2" class="mx-2" type="radio" checked="checked" name="status">Akceptuj</label>
+                    <label class="radio-inline"><input value="3" class="mx-2" type="radio" name="status">Odrzuć</label>
                     <div class="invalid-feedback">
                         Proszę wybrać status.
                     </div>

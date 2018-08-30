@@ -16,7 +16,10 @@ import mas.model.dto.IngredientDTO;
 import mas.util.StatusUtil;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
@@ -65,7 +68,9 @@ public class Batch extends ExtendedBusinessObject {
     public BigDecimal getAvailableVolume() {
         BigDecimal availableVolume = volume;
         try {
-            Beverage[] beverages = (Beverage[]) getLinkedObjects(AssociationNames.ASSOC_BATCH_BEVERAGES);
+            List<Beverage> beverages = Arrays.stream(getLinkedObjects(AssociationNames.ASSOC_BATCH_BEVERAGES))
+                    .map(Beverage.class::cast)
+                    .collect(Collectors.toList());
             for (Beverage beverage : beverages) {
                 Template template = (Template) beverage.getLinkedObjects(AssociationNames.ASSOC_BEVERAGE_TEMPLATE)[0];
                 Vessel vessel = (Vessel) template.getLinkedObjects(AssociationNames.ASSOC_TEMPLATE_VESSEL)[0];

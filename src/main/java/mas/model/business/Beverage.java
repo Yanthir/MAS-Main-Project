@@ -13,6 +13,7 @@ import mas.model.constants.AssociationNames;
 import mas.model.dto.AbstractDTO;
 import mas.model.dto.BeverageDTO;
 import mas.model.dto.TemplateDTO;
+import org.apache.commons.lang3.time.DateFormatUtils;
 
 import java.util.Date;
 
@@ -51,7 +52,7 @@ public class Beverage extends ExtendedBusinessObject {
                 throw new BusinessException(e);
             }
         }
-        String templateId = ((BeverageDTO) abstractDTO).getBatchId();
+        String templateId = ((BeverageDTO) abstractDTO).getTemplateId();
         Template template = (Template) getById(Template.class, templateId);
         if (template != null) {
             try {
@@ -64,14 +65,14 @@ public class Beverage extends ExtendedBusinessObject {
                 throw new BusinessException(e);
             }
         }
-        String orderId = ((BeverageDTO) abstractDTO).getBatchId();
+        String orderId = ((BeverageDTO) abstractDTO).getOrderId();
         Order order = (Order) getById(Order.class, orderId);
         if (order != null) {
             try {
-                compose(
-                        AssociationNames.ASSOC_BEVERAGE_ORDER,
+                order.compose(
                         AssociationNames.ASSOC_ORDER_BEVERAGES,
-                        order
+                        AssociationNames.ASSOC_BEVERAGE_ORDER,
+                        this
                 );
             } catch (AssociationException | LinkingException | CompositionException e) {
                 throw new BusinessException(e);
@@ -82,5 +83,9 @@ public class Beverage extends ExtendedBusinessObject {
     public Date getExpirationDate() throws AssociationException {
         Batch batch = (Batch) getLinkedObjects(AssociationNames.ASSOC_BEVERAGE_BATCH)[0];
         return batch.getExpirationDate();
+    }
+
+    public String getSubmissionDateFormatted() {
+        return DateFormatUtils.format(getCreateDate(), "yyyy-MM-dd HH:mm:ss");
     }
 }

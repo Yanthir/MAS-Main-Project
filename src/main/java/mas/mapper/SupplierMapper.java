@@ -12,7 +12,7 @@ public class SupplierMapper extends AbstractMapper {
     private static SqlSessionFactory sqlSessionFactory = MyBatisSqlSessionManager.getFactory();
 
     public static SupplierDTO selectSupplierById(@Param("id") String id) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             return session.selectOne("selectSupplierById", id);
         } finally {
             closeAllConnections();
@@ -20,7 +20,7 @@ public class SupplierMapper extends AbstractMapper {
     }
 
     public static List<SupplierDTO> selectSuppliersByIds(@Param("id") List<String> ids) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             return session.selectList("selectSuppliersByIds", ids);
         } finally {
             closeAllConnections();
@@ -28,7 +28,7 @@ public class SupplierMapper extends AbstractMapper {
     }
 
     public static List<SupplierDTO> selectAllSuppliers() {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             return session.selectList("selectAllSuppliers");
         } finally {
             closeAllConnections();
@@ -36,7 +36,7 @@ public class SupplierMapper extends AbstractMapper {
     }
 
     public static void updateSupplier(@Param("supplier") SupplierDTO supplier) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.update("updateSupplier", supplier);
         } finally {
             closeAllConnections();
@@ -44,7 +44,7 @@ public class SupplierMapper extends AbstractMapper {
     }
 
     public static void insertSupplier(@Param("supplier") SupplierDTO supplier) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.insert("insertSupplier", supplier);
         } finally {
             closeAllConnections();
@@ -52,14 +52,14 @@ public class SupplierMapper extends AbstractMapper {
     }
 
     public static void deleteSupplierById(@Param("id") String id) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.delete("deleteSupplierById", id);
         } finally {
             closeAllConnections();
         }
     }
     public static void deleteSuppliersByIds(@Param("ids") List<String> ids) {
-        try(SqlSession session = sqlSessionFactory.openSession()) {
+        try(SqlSession session = sqlSessionFactory.openSession(true)) {
             session.delete("deleteSuppliersByIds", ids);
         } finally {
             closeAllConnections();
