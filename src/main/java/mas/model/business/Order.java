@@ -81,6 +81,6 @@ public class Order extends ExtendedBusinessObject {
     }
 
     public String getDeliveryDateFormatted() {
-        return getDeliveryDate() != null ? DateFormatUtils.format(getSubmissionDate(), "yyyy-MM-dd HH:mm:ss") : "--";
+        return getDeliveryDate() != null ? DateFormatUtils.format(getDeliveryDate(), "yyyy-MM-dd HH:mm:ss") : "--";
     }
 }
