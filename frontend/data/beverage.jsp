@@ -12,6 +12,7 @@
 <%@page pageEncoding="utf-8" %>
 
 <%
+    String context = request.getContextPath();
     if(session.getAttribute("clientId") == null || request.getAttribute("orderId") == null) {
         request.getRequestDispatcher("/error").forward(request, response);
         return;
@@ -69,3 +70,6 @@
         </tr>
     <% } %>
 </table>
+<div>
+    <a class="nav-link" href="<%=context%>/order/view">&#x1F844; Powrót</a>
+</div>

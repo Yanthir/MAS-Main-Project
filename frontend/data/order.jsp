@@ -8,6 +8,9 @@
 <%@ page import="java.util.Comparator" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.stream.Collectors" %>
+<%@ page import="java.math.BigDecimal" %>
+<%@ page import="mas.model.business.Template" %>
+<%@ page import="java.text.DecimalFormat" %>
 <%@page pageEncoding="utf-8" %>
 
 <%
@@ -45,10 +48,20 @@
         } catch (AssociationException e) {
             throw new BusinessException(e);
         }
+        BigDecimal orderPrice = BigDecimal.ZERO;
+        for(Beverage beverage : beverages) {
+            try {
+                Template template = (Template) beverage.getLinkedObjects(AssociationNames.ASSOC_BEVERAGE_TEMPLATE)[0];
+                orderPrice = orderPrice.add(template.getPrice());
+            } catch (AssociationException e) {
+                throw new BusinessException(e);
+            }
+        }
+        String formattedOrderPrice = new DecimalFormat("0.00").format(orderPrice);
     %>
-    <form id="beverageView" action="<%=context%>/beverage/view" method="post">
-        <input type="hidden" name="orderId" value=""/>
-    </form>
+        <form id="beverageView" action="<%=context%>/beverage/view" method="post">
+            <input type="hidden" name="orderId" value=""/>
+        </form>
         <tr class="beverageLink linkRow" orderId="<%=order.getId()%>">
             <td scope="row">
                 <%=i+1%>
@@ -63,7 +76,7 @@
                 <%=order.getDeliveryDateFormatted()%>
             </td>
             <td>
-                <%=beverages.size()%>
+                <%=formattedOrderPrice%>
             </td>
         </tr>
     <% } %>
