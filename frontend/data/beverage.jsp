@@ -9,6 +9,7 @@
 <%@ page import="java.util.Comparator" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.stream.Collectors" %>
+<%@ page import="java.text.DecimalFormat" %>
 <%@page pageEncoding="utf-8" %>
 
 <%
@@ -50,6 +51,7 @@
         } catch (AssociationException e) {
             throw new BusinessException(e);
         }
+        String formattedBeveragePrice = new DecimalFormat("0.00").format(template.getPrice());
     %>
         <tr>
             <td scope="row">
@@ -65,7 +67,7 @@
                 <%=beverage.getSubmissionDateFormatted()%>
             </td>
             <td>
-                <%=template.getPrice()%>
+                <%=formattedBeveragePrice%>
             </td>
         </tr>
     <% } %>

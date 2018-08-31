@@ -12,6 +12,7 @@ public class LogoutController extends HttpServlet {
         request.setAttribute("pageName", "login");
         request.setAttribute("logoutMessage", "Pomyślnie wylogowano użytkownika!");
         request.getSession().setAttribute("employeeId", null);
+        request.getSession().setAttribute("clientId", null);
         request.getRequestDispatcher("/main.jsp").forward(request, response);
     }
 
